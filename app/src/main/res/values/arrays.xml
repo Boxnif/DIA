@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="selbststaendig_array">
+        <item>"Bitte auswählen"</item>
+        <item>"selbständig"</item>
+        <item>"überwiegend selbstständig"</item>
+        <item>"überwiegend unselbstständig"</item>
+        <item>"unselbstständig"</item>
+    </string-array>
+
+    <string-array name="faehigkeiten_array">
+        <item>"Bitte auswählen"</item>
+        <item>"Fähigkeit vorhanden / unbeeinträchtigt"</item>
+        <item>"Fähigkeit größtenteils vorhanden"</item>
+        <item>"Fähigkeit in geringem Maße vorhanden"</item>
+        <item>"Fähigkeit nicht vorhanden"</item>
+    </string-array>
+    <string-array name="haufigkeiten_array">
+        <item>"Bitte auswählen"</item>
+        <item>"nie oder sehr selten"</item>
+        <item>"selten (ein- bis dreimal innerhalb von zwei Wochen)"</item>
+        <item>"häufig (zweimal bis mehrmals wöchentlich, aber nicht täglich)"</item>
+        <item>"täglich"</item>
+    </string-array>
+    <string-array name="janein_array">
+        <item>"Bitte auswählen"</item>
+        <item>"Nein"</item>
+        <item>"Ja"</item>
+    </string-array>
+
+    <string-array name="enttese_array">
+        <item>"Bitte auswählen"</item>
+        <item>"selbstständig/nicht täglich, nicht auf Dauer"</item>
+        <item>"täglich, zusätzlich zur oralen Ernährung"</item>
+        <item>"ausschließlich, oder nahezu ausschließlich"</item>
+    </string-array>
+
+    <string-array name="entselbststaendig_array">
+        <item>"Bitte auswählen"</item>
+        <item>"entfällt oder selbständig"</item>
+        <item>"unselbständig"</item>
+
+    </string-array>
+    <string-array name="monatWoche_array">
+        <item>"Bitte auswählen"</item>
+        <item>"entfällt oder selbständig"</item>
+        <item>"unselbständig"</item>
+    </string-array>
+    <string-array name="postitions_array">
+        <item>"Geschäftsführer"</item>
+        <item>"Privatperson"</item>
+    </string-array>
+</resources>
