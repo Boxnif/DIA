@@ -63,7 +63,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:id="@+id/button"
+                android:id="@+id/loadButton"
                 android:layout_below="@+id/startButton"
                 android:layout_marginTop="10dp"/>
 
@@ -74,7 +74,7 @@
                 android:id="@+id/loginButton"
                 android:layout_alignParentBottom="false"
                 android:layout_centerHorizontal="true"
-                android:layout_below="@+id/button"
+                android:layout_below="@+id/loadButton"
                 android:layout_alignParentEnd="false"
                 android:layout_alignParentTop="false"
                 android:layout_alignParentStart="false"

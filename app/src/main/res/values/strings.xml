@@ -843,6 +843,8 @@
 
 
     <string name="title_activity_patienten_info">PatientenInfo</string>
-
+    <string name="infotextRegistrierung">This is a infotext</string>
+    <string name="infotextLizenzen">This is a infotext</string>
+    <string name="infotextAGB">This is a infotext</string>
 
 </resources>

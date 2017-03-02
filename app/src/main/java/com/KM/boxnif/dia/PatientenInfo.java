@@ -38,8 +38,8 @@ public class PatientenInfo extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                vor= ((EditText)findViewById(R.id.editText1)).getText().toString();
-                nach= ((EditText)findViewById(R.id.editText2)).getText().toString();
+                vor= ((EditText)findViewById(R.id.vorname)).getText().toString();
+                nach= ((EditText)findViewById(R.id.nachname)).getText().toString();
                 if(vor.equals("")|| nach.equals("")||dpButton.getText().equals("Bitte Geburtsdatum auswählen"))
                 {
                     Toast.makeText(getApplicationContext(), "Bitte füllen sie alles aus",Toast.LENGTH_LONG).show();

@@ -9,7 +9,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.KM.boxnif.dia.PatientenInfo">
+    tools:context="com.KM.boxnif.dia.PatientenInfo"
+    android:focusable="true" android:focusableInTouchMode="true">
 
     <TextView
         android:layout_width="match_parent"
@@ -45,7 +46,7 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:id="@+id/editText1"
+        android:id="@+id/vorname"
         android:layout_below="@+id/textView1"
         android:imeOptions="actionDone"
         android:background="@android:drawable/editbox_background"
@@ -59,7 +60,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/textView2"
         android:textColor="@android:color/black"
-        android:layout_below="@+id/editText1"
+        android:layout_below="@+id/vorname"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:textSize="22sp"/>
@@ -69,7 +70,7 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:id="@+id/editText2"
+        android:id="@+id/nachname"
         android:layout_below="@+id/textView2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -83,7 +84,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView3"
-        android:layout_below="@+id/editText2"
+        android:layout_below="@+id/nachname"
         android:textColor="@android:color/black"
         android:textSize="22sp"/>
 
