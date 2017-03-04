@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">UW NBA</string>
+    <string name="app_name">UW NBI</string>
     <string name="patientenname"><![CDATA[<b>Patientenname:</b><br>]]></string>
     <string name="patientenalter"><![CDATA[<br><br><b>Patientenalter:</b><br>]]></string>
     <string name="u18m"><![CDATA[<br><br>Da der Patient jünger als 18 Monate, bzw. 18 Monate, alt ist, findet eine abgeänderte Berechnung statt, in der sowohl einzelne Kriterien, als auch ganze Module wegfallen.]]></string>
@@ -846,5 +846,32 @@
     <string name="infotextRegistrierung">This is a infotext</string>
     <string name="infotextLizenzen">This is a infotext</string>
     <string name="infotextAGB">This is a infotext</string>
+    <string name="infotextDatenschutz">infotextDatenschutz</string>
+    <string name="pPerson">Privatperson</string>
+    <string name="firma">Firma</string>
+    <string name="vNName">Vor-/Nachname</string>
+    <string name="fName">Firmenname</string>
+    <string name="emailAdresse">Email-Adresse</string>
+    <string name="emailAdresseW">Email-Adresse wiederholen</string>
+    <string name="password">Passwort</string>
+    <string name="passwordW">Passwort wiederholen</string>
+    <string name="adLizenzen">Anzahl der Lizenzen</string>
+    <string name="pfdRegistrierung">Preis für die Registrierung</string>
+    <string name="bestätigung">Hiermit bestätige ich die AGB und Datenschutzerklärung gelesen zu haben und diese zu akzeptieren</string>
+    <string name="agb">AGB</string>
+    <string name="registrierungundKauf">Registrierung und weiter zum Kauf</string>
+    <string name="reginf1"><![CDATA[<b>Name:</b><br>]]></string>
+    <string name="reginf2"><![CDATA[<br><br><b>Email-Adresse:</b><br>]]></string>
+    <string name="reginf3"><![CDATA[<br><br><b>Passwort:</b><br>]]></string>
+    <string name="reginf4"><![CDATA[<br><br><b>Anzahl der Lizenzen:</b><br>]]></string>
+
+
+
+
+
+
+
+
+
 
 </resources>
