@@ -13,12 +13,14 @@ import java.util.LinkedList;
 public class Utility
 {
     Intent i;
+    public static Boolean logedIn = false;
     public static int gebT,gebM,gebY,heuteT,heuteM,heuteY,age,month;
     LinkedList<String> strlist = new LinkedList<>();
     LinkedList<String> strlist123 = new LinkedList<>();
     LinkedList<String> strlist369 = new LinkedList<>();
     LinkedList<String> strlist246 = new LinkedList<>();
     LinkedList<String> strlist63 = new LinkedList<>();
+
 
     public static String vor,nach,alter;
     public static int modul_1_punkte;

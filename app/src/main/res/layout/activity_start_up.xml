@@ -81,6 +81,14 @@
                 android:layout_alignParentRight="false"
                 android:layout_marginTop="10dp"/>
 
+            <Button
+                android:id="@+id/registrierenButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="0.83"
+                android:text="@string/m011"/>
+
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

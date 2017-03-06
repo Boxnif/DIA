@@ -2,23 +2,19 @@ package com.KM.boxnif.dia;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.text.Html;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
-import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -35,10 +31,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.regex.Pattern;
 
-
-import static com.KM.boxnif.dia.R.id.emailW;
-import static com.KM.boxnif.dia.R.id.view;
-
 public class Registrierung extends AppCompatActivity
 {
     Spinner spin;
@@ -48,6 +40,7 @@ public class Registrierung extends AppCompatActivity
     String name, email, emailW, password, passwordW, macadresse, position;
     int  lizenz;
     Utility utility;
+    public static boolean nutzer = false;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -63,6 +56,7 @@ public class Registrierung extends AppCompatActivity
             {
                 if (checkInputs())
                 {
+                    nutzer();
                     showAlert(view);
 
                 }
@@ -246,28 +240,20 @@ public class Registrierung extends AppCompatActivity
             @Override
             public void onClick(DialogInterface dialog, int which)
             {
-                dialog.dismiss();
 
                 macadresse = getMacAddr();
-                Response.Listener<String> responseListener = new Response.Listener<String>()
+                if(!nutzer)
                 {
-                    @Override
-                    public void onResponse(String response)
-                    {
-                        try
-                        {
-                            JSONObject jsonObject = new JSONObject(response);
-                            boolean success = jsonObject.getBoolean("success");
-                        } catch (JSONException e)
-                        {
-                            e.printStackTrace();
-                        }
-                    }
-                };
-                RegistrierungsAnfrage ra = new RegistrierungsAnfrage(email,name,password,macadresse,lizenz,position,responseListener );
-                //Registrierungsanfrage_Test ra = new Registrierungsanfrage_Test("finn@something", "kappa",3, "kgfkfg","kappa123","chef",responseListener);
-                RequestQueue queue = Volley.newRequestQueue(Registrierung.this);
-                queue.add(ra);
+                    registriere();
+                    dialog.dismiss();
+                    Intent i = new Intent(getApplicationContext(), Login.class);
+                    startActivity(i);
+
+                }
+                else
+                {
+                    Toast.makeText(getApplicationContext(), "Email Adresse ist schon in benutzung",Toast.LENGTH_LONG).show();
+                }
 
             }
         });
@@ -282,6 +268,70 @@ public class Registrierung extends AppCompatActivity
 
         alert.create();
         alert.show();
+    }
+    //checked ob die email schon in Benutzung ist
+    private void nutzer()
+    {
+
+        Response.Listener<String> rListener = new Response.Listener<String>()
+        {
+            @Override
+            public void onResponse(String response)
+            {
+                try
+                {
+                    JSONObject jsonObject = new JSONObject(response);
+                    boolean success = jsonObject.getBoolean("success");
+                    if(success)
+                    {
+                        Registrierung.nutzer = true;
+                    }
+                    else
+                    {
+                        Registrierung.nutzer = false;
+                    }
+                } catch (JSONException e)
+                {
+                    e.printStackTrace();
+                }
+            }
+        };
+        NutzerAnfrage na = new NutzerAnfrage(email,rListener );
+        RequestQueue queue = Volley.newRequestQueue(Registrierung.this);
+        queue.add(na);
+    }
+    //registriert den benutzer
+    private void registriere()
+    {
+        Response.Listener<String> responseListener = new Response.Listener<String>()
+        {
+            @Override
+            public void onResponse(String response)
+            {
+                try
+                {
+                    JSONObject jsonObject = new JSONObject(response);
+                    boolean success = jsonObject.getBoolean("success");
+                    if(success)
+                    {
+                        // TODO: 05.03.2017 aktion für nach der Registrierung eingügen
+                        //finish();
+                    }
+                    else
+                    {
+                        AlertDialog.Builder builder = new AlertDialog.Builder(Registrierung.this);
+                        builder.setMessage("Registrierung fehlgeschlagen").setNegativeButton("Retry", null).create().show();
+                    }
+                } catch (JSONException e)
+                {
+                    e.printStackTrace();
+                }
+            }
+        };
+        RegistrierungsAnfrage ra = new RegistrierungsAnfrage(email,name,password,macadresse,lizenz,position,responseListener );
+        //Registrierungsanfrage_Test ra = new Registrierungsanfrage_Test("finn@something", "kappa",3, "kgfkfg","kappa123","chef",responseListener);
+        RequestQueue queue = Volley.newRequestQueue(Registrierung.this);
+        queue.add(ra);
     }
 
 }

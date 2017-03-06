@@ -25,9 +25,6 @@ public class RegistrierungsAnfrage extends StringRequest
         params.put("lizenz", lizenz+"");
         params.put("macadresse", macadresse);
         params.put("position", position);
-
-
-
     }
 
     @Override

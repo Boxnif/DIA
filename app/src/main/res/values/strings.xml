@@ -16,6 +16,8 @@
     <string name="m008">Geburtsdatum</string>
     <string name="m009">Bitte ausfüllen</string>
     <string name="m010">Bitte Geburtsdatum auswählen</string>
+    <string name="m011">Registrieren</string>
+
 
     <string name="m1ueberschrift">Modul 1: Mobilität</string>
     <string name="m101">1.1 Positonswechsel im Bett</string>
@@ -864,6 +866,8 @@
     <string name="reginf2"><![CDATA[<br><br><b>Email-Adresse:</b><br>]]></string>
     <string name="reginf3"><![CDATA[<br><br><b>Passwort:</b><br>]]></string>
     <string name="reginf4"><![CDATA[<br><br><b>Anzahl der Lizenzen:</b><br>]]></string>
+
+
 
 
 
