@@ -120,6 +120,10 @@ public class PatientenInfo extends AppCompatActivity
         alert.create();
         alert.show();
     }
+    public void onBackPressed() {
+        Intent i = new Intent(getApplicationContext(), StartUp.class);
+        startActivity(i);
+    }
 
 
 

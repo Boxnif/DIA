@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.KM.boxnif.dia.Anfragen.LoginAnfrage;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
@@ -32,10 +33,8 @@ public class Login extends AppCompatActivity
             public void onClick(View v)
 
             {
-                // TODO: 06.03.2017 leere eingabe abfangen
-                final String email = ((EditText) findViewById(R.id.email)).getText().toString();
+                final String email = ((EditText) findViewById(R.id.anzahl)).getText().toString();
                 final String password = ((EditText) findViewById(R.id.password)).getText().toString();
-
                 Response.Listener<String> responseListener = new Response.Listener<String>()
                 {
                     @Override
@@ -48,6 +47,7 @@ public class Login extends AppCompatActivity
                             if (success)
                             {
                                 Utility.logedIn = true;
+                                Utility.email = email;
                                 Intent i = new Intent(getApplicationContext(), StartUp.class);
                                 startActivity(i);
                             } else

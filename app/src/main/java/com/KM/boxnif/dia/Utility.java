@@ -14,6 +14,11 @@ public class Utility
 {
     Intent i;
     public static Boolean logedIn = false;
+    public static String email;
+    public static int anzahl = 0;
+    public static Boolean registriert = false;
+    public static Boolean registrierungOffen = false;
+
     public static int gebT,gebM,gebY,heuteT,heuteM,heuteY,age,month;
     LinkedList<String> strlist = new LinkedList<>();
     LinkedList<String> strlist123 = new LinkedList<>();

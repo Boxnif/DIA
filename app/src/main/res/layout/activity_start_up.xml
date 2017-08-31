@@ -11,84 +11,110 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.KM.boxnif.dia.StartUp">
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:orientation="vertical">
 
-        <LinearLayout
-            android:orientation="vertical"
+        <ScrollView
+            android:id="@+id/sview"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:weightSum="1">
+            android:layout_height="426dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true">
 
-            <ImageView
+            <LinearLayout
                 android:layout_width="match_parent"
-                app:srcCompat="@drawable/uwlogo"
-                android:layout_alignParentTop="true"
-                android:id="@+id/imageView"
-                android:scaleType="fitCenter"
-                android:contentDescription=""
-                android:layout_weight="0.83"
-                android:layout_height="200dp"/>
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="1">
 
-            <TextView
-                android:text="@string/m001"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="false"
-                android:layout_centerHorizontal="true"
-                android:id="@+id/textView"
-                android:layout_below="@+id/imageView"
-                android:textColorLink="?attr/editTextColor"
-                android:textColor="@android:color/background_dark"
-                android:autoText="false"
-                android:textSize="21sp"
-                android:textAlignment="center"/>
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_weight="0.83"
+                    android:contentDescription=""
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/uwlogo"/>
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/m002"
-                android:id="@+id/startButton"
-                android:layout_alignParentBottom="false"
-                android:layout_centerHorizontal="true"
-                android:layout_below="@+id/textView"
-                android:layout_marginTop="10dp"/>
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageView"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="false"
+                    android:autoText="false"
+                    android:text="@string/m001"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/background_dark"
+                    android:textColorLink="?attr/editTextColor"
+                    android:textSize="21sp"/>
 
-            <Button
-                android:text="@string/m003"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:id="@+id/loadButton"
-                android:layout_below="@+id/startButton"
-                android:layout_marginTop="10dp"/>
+                <Button
+                    android:id="@+id/startButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="false"
+                    android:layout_below="@+id/textView"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/m002"/>
 
-            <Button
-                android:text="@string/m004"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/loginButton"
-                android:layout_alignParentBottom="false"
-                android:layout_centerHorizontal="true"
-                android:layout_below="@+id/loadButton"
-                android:layout_alignParentEnd="false"
-                android:layout_alignParentTop="false"
-                android:layout_alignParentStart="false"
-                android:layout_alignParentRight="false"
-                android:layout_marginTop="10dp"/>
+                <Button
+                    android:id="@+id/loadButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/startButton"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/m003"/>
 
-            <Button
-                android:id="@+id/registrierenButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_weight="0.83"
-                android:text="@string/m011"/>
+                <Button
+                    android:id="@+id/loginButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="false"
+                    android:layout_alignParentEnd="false"
+                    android:layout_alignParentRight="false"
+                    android:layout_alignParentStart="false"
+                    android:layout_alignParentTop="false"
+                    android:layout_below="@+id/loadButton"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/m004"/>
 
-        </LinearLayout>
-    </ScrollView>
+                <Button
+                    android:id="@+id/registrierenButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/m011"/>
+
+                <Button
+                    android:id="@+id/dsButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="0.83"
+                    android:text="@string/m016"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/werbeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/pastellGrün"
+            android:text="@string/m015"
+            android:textColor="@color/pastellBlau"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
 </RelativeLayout>

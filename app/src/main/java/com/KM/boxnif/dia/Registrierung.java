@@ -2,6 +2,7 @@ package com.KM.boxnif.dia;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -19,6 +20,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.KM.boxnif.dia.Anfragen.LizenzenAnfrage;
+import com.KM.boxnif.dia.Anfragen.NutzerAnfrage;
+import com.KM.boxnif.dia.Anfragen.RegistrierungsAnfrage;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
@@ -26,19 +30,16 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.net.NetworkInterface;
-import java.util.Collections;
-import java.util.List;
 import java.util.regex.Pattern;
 
 public class Registrierung extends AppCompatActivity
 {
     Spinner spin;
     TextView tv;
-    Button btn, agbB,lizenzB;
-    //$email, $name, $password, $macadresse, $lizenzen);
-    String name, email, emailW, password, passwordW, macadresse, position;
-    int  lizenz;
+    Button btn, agbB;
+    //$email, $name, $password, $macadresse, );
+    String name, email, emailW, password, passwordW, position;
+
     Utility utility;
     public static boolean nutzer = false;
     @Override
@@ -62,16 +63,6 @@ public class Registrierung extends AppCompatActivity
                 }
             }
         });
-        lizenzB = (Button) findViewById(R.id.lizenzButton);
-        lizenzB.setOnClickListener(new View.OnClickListener()
-        {
-
-            @Override
-            public void onClick(View view)
-            {
-                utility.infoPopup(getString(R.string.infotextLizenzen), getApplication());
-            }
-        });
 
         SpannableString ss = new SpannableString(getResources().getString(R.string.bestätigung));
         ClickableSpan span1 = new ClickableSpan() {
@@ -84,12 +75,14 @@ public class Registrierung extends AppCompatActivity
         ClickableSpan span2 = new ClickableSpan() {
             @Override
             public void onClick(View textView) {
-                utility.infoPopup(getString(R.string.infotextDatenschutz), getApplication());
+                String url = "https://anastigmatic-cones.000webhostapp.com/data-privacy.html";
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                startActivity(browserIntent);
             }
         };
 
-        ss.setSpan(span1, 26, 29, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-        ss.setSpan(span2, 34, 54, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        //ss.setSpan(span1, 26, 29, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        ss.setSpan(span2, 26, 46, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         TextView tv = (TextView) findViewById(R.id.agbText);
         tv.setText(ss);
         tv.setMovementMethod(LinkMovementMethod.getInstance());
@@ -99,7 +92,7 @@ public class Registrierung extends AppCompatActivity
 
     public boolean checkInputs()
     {
-        if(name()&&email()&&password()&&lizenz()&&agb())
+        if(name()&&email()&&password()&&agb())
         {
             return true;
         }
@@ -125,7 +118,7 @@ public class Registrierung extends AppCompatActivity
     }
     public boolean email()
     {
-        email = ((EditText)(findViewById(R.id.email))).getText().toString();
+        email = ((EditText)(findViewById(R.id.anzahl))).getText().toString();
         emailW = ((EditText)(findViewById(R.id.emailW))).getText().toString();
         if(emailPattern.matcher(email).matches()&&email.equals(emailW))
         {
@@ -151,16 +144,7 @@ public class Registrierung extends AppCompatActivity
 
         return true;
     }
-    public boolean lizenz()
-    {
-        if (lizenzPattern.matcher(((EditText) findViewById(R.id.lizenzen)).getText().toString()).matches())
-        {
-            lizenz = Integer.parseInt(((EditText) findViewById(R.id.lizenzen)).getText().toString());
-            return true;
-        }
-        Toast.makeText(getApplicationContext(), "Lizenz darf nicht leer oder 0 sein",Toast.LENGTH_LONG).show();
-        return false;
-    }
+
     public boolean agb()
     {
         if(((CheckBox) findViewById(R.id.agbCb)).isChecked())
@@ -170,10 +154,7 @@ public class Registrierung extends AppCompatActivity
         Toast.makeText(getApplicationContext(), "Bitte bestätigen sie das sie die AGB gelesen haben",Toast.LENGTH_LONG).show();
         return false;
     }
-    private static final Pattern lizenzPattern = Pattern.compile
-    (
-            "[1-9]"+"[0-9]*"
-    );
+
     public static final Pattern emailPattern = Pattern.compile(
             "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +
                     "\\@" +
@@ -183,38 +164,6 @@ public class Registrierung extends AppCompatActivity
                     "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}" +
                     ")+"
     );
-    private static String getMacAddr()
-    {
-        try
-        {
-            List<NetworkInterface> all = Collections.list(NetworkInterface.getNetworkInterfaces());
-            for (NetworkInterface nif : all)
-            {
-                if (!nif.getName().equalsIgnoreCase("wlan0")) continue;
-
-                byte[] macBytes = nif.getHardwareAddress();
-                if (macBytes == null)
-                {
-                    return "";
-                }
-
-                StringBuilder res1 = new StringBuilder();
-                for (byte b : macBytes)
-                {
-                    res1.append(Integer.toHexString(b & 0xFF) + ":");
-                }
-
-                if (res1.length() > 0)
-                {
-                    res1.deleteCharAt(res1.length() - 1);
-                }
-                return res1.toString();
-            }
-        } catch (Exception ex)
-        {
-        }
-        return "02:00:00:00:00:00";
-    }
     public void onRadioButtonClicked(View view)
     {
         // Is the button now checked?
@@ -234,14 +183,13 @@ public class Registrierung extends AppCompatActivity
     private void showAlert(View view)
     {
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
-        alert.setMessage(Html.fromHtml(getString(R.string.reginf1)+name+getString(R.string.reginf2)+email+getString(R.string.reginf3)+password+getString(R.string.reginf4)+lizenz));
+        alert.setMessage(Html.fromHtml(getString(R.string.reginf1)+name+getString(R.string.reginf2)+email+getString(R.string.reginf3)+password));
         alert.setPositiveButton("Weiter", new DialogInterface.OnClickListener()
         {
             @Override
             public void onClick(DialogInterface dialog, int which)
             {
 
-                macadresse = getMacAddr();
                 if(!nutzer)
                 {
                     registriere();
@@ -252,7 +200,7 @@ public class Registrierung extends AppCompatActivity
                 }
                 else
                 {
-                    Toast.makeText(getApplicationContext(), "Email Adresse ist schon in benutzung",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Diese E-Mail Adresse wird schon verwendet.",Toast.LENGTH_LONG).show();
                 }
 
             }
@@ -328,10 +276,11 @@ public class Registrierung extends AppCompatActivity
                 }
             }
         };
-        RegistrierungsAnfrage ra = new RegistrierungsAnfrage(email,name,password,macadresse,lizenz,position,responseListener );
-        //Registrierungsanfrage_Test ra = new Registrierungsanfrage_Test("finn@something", "kappa",3, "kgfkfg","kappa123","chef",responseListener);
+        RegistrierungsAnfrage ra = new RegistrierungsAnfrage(email,name,password,position,responseListener );
         RequestQueue queue = Volley.newRequestQueue(Registrierung.this);
         queue.add(ra);
     }
+
+
 
 }

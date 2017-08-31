@@ -72,7 +72,7 @@
                     android:background="@android:drawable/editbox_background"
                     android:imeOptions="actionDone"
                     android:inputType="textPersonName"
-                    android:text="finn"/>
+                    />
 
                 <TextView
                     android:text="@string/emailAdresse"
@@ -84,14 +84,14 @@
                     android:textColor="@color/aLitteBlack"/>
 
                 <EditText
-                    android:id="@+id/email"
+                    android:id="@+id/anzahl"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/textView2"
                     android:background="@android:drawable/editbox_background"
                     android:imeOptions="actionDone"
                     android:inputType="textPersonName"
-                    android:text="finn@gamil.com"/>
+                    />
 
                 <TextView
                     android:text="@string/emailAdresseW"
@@ -99,7 +99,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/textView3"
                     android:textSize="18sp"
-                    android:layout_below="@+id/email"
+                    android:layout_below="@+id/anzahl"
                     android:textColor="@color/aLitteBlack"/>
 
                 <EditText
@@ -110,7 +110,7 @@
                     android:background="@android:drawable/editbox_background"
                     android:imeOptions="actionDone"
                     android:inputType="textPersonName"
-                    android:text="finn@gamil.com"/>
+                    />
                 <TextView
                     android:text="@string/password"
                     android:layout_width="wrap_content"
@@ -128,7 +128,7 @@
                     android:background="@android:drawable/editbox_background"
                     android:imeOptions="actionDone"
                     android:inputType="textPersonName"
-                    android:text="la"/>
+                    />
                 <TextView
                     android:text="@string/passwordW"
                     android:layout_width="wrap_content"
@@ -146,48 +146,7 @@
                     android:background="@android:drawable/editbox_background"
                     android:imeOptions="actionDone"
                     android:inputType="textPersonName"
-                    android:text="la"/>
-                <TextView
-                    android:text="@string/adLizenzen"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView6"
-                    android:textSize="18sp"
-                    android:layout_below="@+id/passwordW"
-                    android:textColor="@color/aLitteBlack"/>
-                <Button
-                    android:id="@+id/lizenzButton"
-                    android:text="@string/qest"
-                    android:layout_alignParentTop="false"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="false"
-                    android:layout_below="@id/passwordW"
-                    android:background="@android:drawable/checkbox_off_background"
-                    android:layout_width="24dp"
-                    android:layout_height="26dp"
-                    android:textSize="18dp"/>
-
-                <EditText
-                    android:id="@+id/lizenzen"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/textView6"
-                    android:background="@android:drawable/editbox_background"
-                    android:ems="10"
-                    android:imeOptions="actionDone"
-                    android:inputType="number"
-                    android:text="5"/>
-                <TextView
-                    android:text="@string/pfdRegistrierung"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView7"
-                    android:textSize="18sp"
-                    android:layout_below="@+id/lizenzen"
-                    android:textColor="@color/aLitteBlack"
-                    android:paddingTop="20dp"/>
+                    />
 
 
                 <LinearLayout
@@ -195,7 +154,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/agb"
                     android:paddingTop="20dp"
-                    android:layout_below="@id/textView7"
+                    android:layout_below="@id/passwordW"
                     android:orientation="horizontal">
 
                     <CheckBox

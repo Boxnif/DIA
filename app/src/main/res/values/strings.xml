@@ -6,7 +6,7 @@
     <string name="ue18m"><![CDATA[<br><br>Da der Patient älter als 18 Monate und jünger als 18 Jahre alt ist, findet eine abgeänderte Berechnung statt, in der einzelne Kriterien mit unterschiedlichen Einzelpunkten berechnet werden.]]></string>
     <string name="ue18j"><![CDATA[<br><br>Da der Patient älter als 18 Jahre ist, findet die Standartberechnung statt.]]></string>
 
-    <string name="m001">Neues Begutachtungsassesment zur Feststellung von Pflegebedürftigkeit</string>
+    <string name="m001">Neues Begutachtungsinstrument zur Feststellung von Pflegebedürftigkeit</string>
     <string name="m002">Neue Begutachtung</string>
     <string name="m003">Daten Laden</string>
     <string name="m004">Login</string>
@@ -16,7 +16,12 @@
     <string name="m008">Geburtsdatum</string>
     <string name="m009">Bitte ausfüllen</string>
     <string name="m010">Bitte Geburtsdatum auswählen</string>
-    <string name="m011">Registrieren</string>
+    <string name="m011">Account Registrieren</string>
+    <string name="m012">Gerät Registrieren</string>
+    <string name="m013">Lizenzen Kaufen</string>
+    <string name="m014">Alter</string>
+    <string name="m015">Zu unserem Seminarkallender</string>
+    <string name="m016">Datenschutzerklärung</string>
 
 
     <string name="m1ueberschrift">Modul 1: Mobilität</string>
@@ -106,8 +111,16 @@
     <string name="mA04">Modul 4: </string>
     <string name="mA05">Modul 5: </string>
     <string name="mA06">Modul 6: </string>
-
+    <string name="mA07">Summe der gewichteten Assessmentpunkte: </string>
+    <string name="mA08">Besondere Bedarfskonstellation: </string>
+    <string name="mA09">Pflegegrad: </string>
+    <string name="mA10">Speichern</string>
+    <string name="mA11">Möchten sie die Daten wirklich speichern?</string>
+    <string name="mA12">Zurück zum Start</string>
+    <string name="mA13">Begutachtet am</string>
+    <string name="mA14">Löschen</string>
     <string name="weiter">Weiter</string>
+    <string name="speichern">Sind Sie sicher, dass Sie diese Daten speichern wollen?</string>
 
     <string name="title_activity_modul_1__auswertung">Modul_1_Auswertung</string>
     <string name="title_activity_modul_2__auswertung">Modul_2_Auswertung</string>
@@ -115,6 +128,7 @@
     <string name="title_activity_modul_4__auswertung">Modul_4_Auswertung</string>
     <string name="title_activity_modul_5__auswertung">Modul_5_Auswertung</string>
     <string name="title_activity_modul_6__auswertung">Modul_6_Auswertung</string>
+    <string name="title_activity_modul_Auswertung__auswertung">Ergebnis der Begutachtung</string>
 
     <string name="qest">\?</string>
     <string name="infotext100"><![CDATA[Die Einschätzung richtet sich ausschließlich danach, ob die Person in der Lage ist ohne personelle Unterstützung eine Körperhaltung einzunehmen/zu wechseln und sich fortzubewegen. Zu beurteilen sind hier lediglich Aspekte wie Körperkraft, Balance, Bewegungskoordination etc. und nicht die zielgerichtete Fortbewegung. Hier werden nicht die Folgen kognitiver Beeinträchtigungen auf Planung, Steuerung und Durchführung motorischer Handlungen abgebildet.]]></string>
@@ -215,7 +229,7 @@
     <string name="gassm5"><![CDATA[<b>Gewichtete Assesmentpunkte Modul 5:</b><br>]]></string>
     <string name="gassm6"><![CDATA[<b>Gewichtete Assesmentpunkte Modul 6:</b><br>]]></string>
     <string name="bb"><![CDATA[<br><br><b>Besondere Bedarfskonstellation:</b><br>]]></string>
-    <string name="ergebnis2"><![CDATA[<br><br>Dies ist ein vorläufiges Ergebnis. Es wird von Modul 2 und Modul 3 nur der höhere Wert genutz.]]></string>
+    <string name="ergebnis2"><![CDATA[<br><br>Dies ist ein vorläufiges Ergebnis. Es wird von Modul 2 und Modul 3 nur der höhere Wert genutzt.]]></string>
     <string name="bitAus">Bitte ausfüllen</string>
 
     <string name="infotext200">Die Einschätzung bezieht sich bei den Merkmalen 4.2.1 bis 4.2.8 ausschließlich auf die kognitiven Funktionen und Aktivitäten. Zu beurteilen sind hier lediglich Aspekte wie Erkennen, Entscheiden oder Steuern etc. und nicht die motorische Umsetzung.
@@ -845,10 +859,10 @@
 
 
     <string name="title_activity_patienten_info">PatientenInfo</string>
-    <string name="infotextRegistrierung">This is a infotext</string>
+    <string name="infotextRegistrierung">Willkommen im neuen Begutachtunginstrument. Nach Ihrer Registrierung können Sie die Berechnung durchführen und im Anschluss speichern. Zudem können gespeicherte Daten geladen werden.</string>
     <string name="infotextLizenzen">This is a infotext</string>
     <string name="infotextAGB">This is a infotext</string>
-    <string name="infotextDatenschutz">infotextDatenschutz</string>
+    <string name="infotextDatenschutz">Die Daten werden genutzt, um den Nutzer zu verifizieren und somit den Zugriff auf seine Daten frei zu geben.</string>
     <string name="pPerson">Privatperson</string>
     <string name="firma">Firma</string>
     <string name="vNName">Vor-/Nachname</string>
@@ -859,23 +873,13 @@
     <string name="passwordW">Passwort wiederholen</string>
     <string name="adLizenzen">Anzahl der Lizenzen</string>
     <string name="pfdRegistrierung">Preis für die Registrierung</string>
-    <string name="bestätigung">Hiermit bestätige ich die AGB und Datenschutzerklärung gelesen zu haben und diese zu akzeptieren</string>
+    <string name="bestätigung">Hiermit bestätige ich die Datenschutzerklärung gelesen zu haben und diese zu akzeptieren</string>
     <string name="agb">AGB</string>
-    <string name="registrierungundKauf">Registrierung und weiter zum Kauf</string>
+    <string name="registrierungundKauf">Registrierung</string>
     <string name="reginf1"><![CDATA[<b>Name:</b><br>]]></string>
     <string name="reginf2"><![CDATA[<br><br><b>Email-Adresse:</b><br>]]></string>
     <string name="reginf3"><![CDATA[<br><br><b>Passwort:</b><br>]]></string>
     <string name="reginf4"><![CDATA[<br><br><b>Anzahl der Lizenzen:</b><br>]]></string>
-
-
-
-
-
-
-
-
-
-
 
 
 </resources>

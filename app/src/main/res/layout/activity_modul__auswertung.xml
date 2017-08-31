@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -10,114 +11,251 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.KM.boxnif.dia.Modul_Auswertung">
 
-    <TextView
-        android:text="@string/m006"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:id="@+id/sview"
+            android:layout_width="match_parent"
+            android:layout_height="426dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/ueberschrift"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:background="@android:color/background_light"
+                    android:text="@string/title_activity_modul_Auswertung__auswertung"
+                    android:textSize="26dp"
+                    android:textStyle="bold"/>
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="3dip"
+                    android:layout_below="@+id/ueberschrift"
+                    android:background="#000000"/>
+
+                <TextView
+                    android:id="@+id/vName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+
+                    android:layout_below="@+id/view"
+                    android:text="@string/m006"
+                    android:textColor="@android:color/black"
+                    android:textSize="22sp"/>
+
+                <TextView
+                    android:id="@+id/nName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/vName"
+                    android:text="@string/m007"
+                    android:textColor="@android:color/black"
+                    android:textSize="22sp"/>
+
+                <TextView
+                    android:id="@+id/gDatum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/nName"
+                    android:text="@string/m008"
+                    android:textColor="@android:color/black"
+                    android:textSize="22sp"/>
+
+                <TextView
+                    android:id="@+id/alter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/gDatum"
+                    android:text="@string/m014"
+                    android:textColor="@android:color/black"
+                    android:textSize="22sp"/>
+
+                <View
+                    android:id="@+id/view18"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/alter"
+                    android:layout_marginBottom="20dp"
+                    android:background="#000000"/>
+
+                <TextView
+                    android:id="@+id/endauswertung_01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/alter"
+                    android:text="@string/mA01"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@android:color/black"/>
+
+                <TextView
+                    android:id="@+id/endauswertung_02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/endauswertung_01"
+                    android:text="@string/mA02"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@android:color/black"/>
+
+                <TextView
+                    android:id="@+id/endauswertung_03"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/endauswertung_02"
+                    android:text="@string/mA03"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@android:color/black"/>
+
+                <TextView
+                    android:id="@+id/endauswertung_04"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/endauswertung_03"
+                    android:text="@string/mA04"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@android:color/black"/>
+
+                <TextView
+                    android:id="@+id/endauswertung_05"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/endauswertung_04"
+                    android:text="@string/mA05"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@android:color/black"/>
+
+                <TextView
+                    android:id="@+id/endauswertung_06"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/endauswertung_05"
+                    android:text="@string/mA06"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@android:color/black"/>
+
+                <View
+                    android:id="@+id/view22"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/endauswertung_06"
+                    android:layout_marginBottom="20dp"
+                    android:background="#000000"/>
+
+                <TextView
+                    android:id="@+id/endauswertung_Alle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/endauswertung_06"
+                    android:text="@string/mA07"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@android:color/black"/>
+
+
+                <View
+                    android:id="@+id/view23"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/endauswertung_Alle"
+                    android:layout_marginBottom="20dp"
+                    android:background="#000000"/>
+
+                <TextView
+                    android:id="@+id/endauswertung_bc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/endauswertung_Alle"
+                    android:text="@string/mA08"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@android:color/black"/>
+
+                <View
+                    android:id="@+id/view24"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/endauswertung_bc"
+                    android:layout_marginBottom="20dp"
+                    android:background="#000000"/>
+
+                <TextView
+                    android:id="@+id/endauswertung_ps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/endauswertung_bc"
+                    android:text="@string/mA09"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@android:color/black"/>
+
+                <Button
+                    android:id="@+id/saveButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/endauswertung_ps"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/mA10"/>
+
+                <Button
+                    android:id="@+id/backstartButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/saveButton"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/mA12"/>
+
+            </RelativeLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/werbeButton"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/vName"
-        android:textColor="@android:color/black"
-        android:textSize="22sp"
-        android:layout_alignParentTop="true"
+        android:layout_gravity="bottom"
+        android:background="@color/pastellGrün"
+        android:text="@string/m015"
+        android:textColor="@color/pastellBlau"
+        android:textSize="18sp"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"/>
 
-    <TextView
-        android:text="@string/m007"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/nName"
-        android:textColor="@android:color/black"
-        android:textSize="22sp"
-        android:layout_below="@+id/vName"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
-
-    <TextView
-        android:text="@string/m008"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/gDatum"
-        android:textSize="22sp"
-        android:textColor="@android:color/black"
-        android:layout_below="@+id/nName"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
-
-    <TextView
-        android:text="alter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/alter"
-        android:textColor="@android:color/black"
-        android:textSize="22sp"
-        android:layout_below="@+id/gDatum"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/mA01"
-        android:id="@+id/endauswertung_01"
-        android:textColor="@android:color/black"
-        android:layout_below="@+id/alter"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/mA02"
-        android:id="@+id/endauswertung_02"
-        android:textColor="@android:color/black"
-        android:layout_below="@+id/endauswertung_01"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/mA03"
-        android:id="@+id/endauswertung_03"
-        android:textColor="@android:color/black"
-        android:layout_below="@+id/endauswertung_02"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/mA04"
-        android:id="@+id/endauswertung_04"
-        android:textColor="@android:color/black"
-        android:layout_below="@+id/endauswertung_03"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/mA05"
-        android:id="@+id/endauswertung_05"
-        android:textColor="@android:color/black"
-        android:layout_below="@+id/endauswertung_04"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/mA06"
-        android:id="@+id/endauswertung_06"
-        android:textColor="@android:color/black"
-        android:layout_below="@+id/endauswertung_05"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
 
 </RelativeLayout>

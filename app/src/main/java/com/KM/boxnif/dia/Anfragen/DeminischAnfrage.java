@@ -1,4 +1,4 @@
-package com.KM.boxnif.dia;
+package com.KM.boxnif.dia.Anfragen;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -8,21 +8,21 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by Boxnif on 06.03.2017.
+ * Created by Boxnif on 22.08.2017.
  */
 
-public class NutzerAnfrage extends StringRequest
+public class DeminischAnfrage  extends StringRequest
 {
-    private static final String loginURL = "https://anastigmatic-cones.000webhostapp.com/Nutzer.php";
+    private static final String lizenzURL = "https://anastigmatic-cones.000webhostapp.com/DeminischAnfrage.php";
     private Map<String, String> params;
 
-    public NutzerAnfrage(String email, Response.Listener<String> listener)
+    public DeminischAnfrage(String email, Response.Listener<String> listener)
     {
-        super(Request.Method.POST, loginURL, listener, null);
+        super(Request.Method.POST, lizenzURL, listener, null);
         params = new HashMap<>();
         params.put("email", email);
-    }
 
+    }
     @Override
     public Map<String, String> getParams()
     {

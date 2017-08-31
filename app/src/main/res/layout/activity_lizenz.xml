@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
-    android:id="@+id/activity_login"
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,27 +9,28 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.KM.boxnif.dia.Login">
-    <TextView
-        android:text="E-Mail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView1"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:textSize="18sp"
-        android:textColor="@color/aLitteBlack"/>
+    tools:context="com.KM.boxnif.dia.Lizenz">
 
     <TextView
-        android:text="Passwort"
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView2"
-        android:textSize="18sp"
-        android:layout_below="@+id/anzahl"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:textColor="@color/aLitteBlack"/>
+        android:text="Anzahl der Lizenzen"
+        android:textColor="@color/aLitteBlack"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/anzahl"
+        android:text="Preis"
+        android:textColor="@color/aLitteBlack"
+        android:textSize="18sp"/>
 
     <EditText
         android:id="@+id/anzahl"
@@ -41,26 +42,15 @@
         android:background="@android:drawable/editbox_background"
         android:imeOptions="actionDone"
         android:inputType="textPersonName"
-        />
-
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView2"
-        android:background="@android:drawable/editbox_background"
-        android:imeOptions="actionDone"
-        android:inputType="textPersonName"
-        />
+        android:text="5"/>
 
     <Button
         android:id="@+id/loginButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/password"
+        android:layout_below="@+id/textView2"
         android:layout_centerHorizontal="true"
-        android:text="Login"/>
+        android:text="Bezahlen"/>
 
-</RelativeLayout>
+    </RelativeLayout>
+

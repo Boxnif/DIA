@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.KM.boxnif.dia.AuswertungsAbfrage">
+    <ScrollView
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/ueberschrift"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:background="@android:color/background_light"
+                android:text="@string/title_activity_modul_Auswertung__auswertung"
+                android:textSize="26dp"
+                android:textStyle="bold"/>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="3dip"
+                android:background="#000000"
+                android:id="@+id/view"
+                android:layout_below="@+id/ueberschrift"/>
+            <TextView
+                android:id="@+id/erDatum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/view"
+                android:text="@string/mA13"
+                android:textColor="@android:color/black"
+                android:textSize="22sp"/>
+
+            <TextView
+                android:id="@+id/vName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/erDatum"
+                android:text="@string/m006"
+                android:textColor="@android:color/black"
+                android:textSize="22sp"/>
+
+            <TextView
+                android:text="@string/m007"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/nName"
+                android:textColor="@android:color/black"
+                android:textSize="22sp"
+                android:layout_below="@+id/vName"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"/>
+
+            <TextView
+                android:text="@string/m008"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/gDatum"
+                android:textSize="22sp"
+                android:textColor="@android:color/black"
+                android:layout_below="@+id/nName"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"/>
+
+            <TextView
+                android:id="@+id/alter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/gDatum"
+                android:text="@string/m014"
+                android:textColor="@android:color/black"
+                android:textSize="22sp"/>
+
+            <View
+                android:id="@+id/view18"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/alter"
+                android:layout_marginBottom="20dp"
+                android:background="#000000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/mA01"
+                android:id="@+id/endauswertung_01"
+                android:textColor="@android:color/black"
+                android:layout_below="@+id/alter"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/mA02"
+                android:id="@+id/endauswertung_02"
+                android:textColor="@android:color/black"
+                android:layout_below="@+id/endauswertung_01"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/mA03"
+                android:id="@+id/endauswertung_03"
+                android:textColor="@android:color/black"
+                android:layout_below="@+id/endauswertung_02"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/mA04"
+                android:id="@+id/endauswertung_04"
+                android:textColor="@android:color/black"
+                android:layout_below="@+id/endauswertung_03"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/mA05"
+                android:id="@+id/endauswertung_05"
+                android:textColor="@android:color/black"
+                android:layout_below="@+id/endauswertung_04"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/mA06"
+                android:id="@+id/endauswertung_06"
+                android:textColor="@android:color/black"
+                android:layout_below="@+id/endauswertung_05"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"/>
+
+            <View
+                android:id="@+id/view22"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/endauswertung_06"
+                android:layout_marginBottom="20dp"
+                android:background="#000000"/>
+
+            <TextView
+                android:id="@+id/endauswertung_Alle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/endauswertung_06"
+                android:text="@string/mA07"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/black"/>
+
+
+            <View
+                android:id="@+id/view23"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/endauswertung_Alle"
+                android:layout_marginBottom="20dp"
+                android:background="#000000"/>
+
+            <TextView
+                android:id="@+id/endauswertung_bc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/endauswertung_Alle"
+                android:text="@string/mA08"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/black"/>
+
+            <View
+                android:id="@+id/view24"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/endauswertung_bc"
+                android:layout_marginBottom="20dp"
+                android:background="#000000"/>
+
+            <TextView
+                android:id="@+id/endauswertung_ps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/endauswertung_bc"
+                android:text="@string/mA09"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/black"/>
+            <Button
+                android:id="@+id/loeschenButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/endauswertung_ps"
+                android:text="@string/mA14"/>
+
+
+        </RelativeLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
