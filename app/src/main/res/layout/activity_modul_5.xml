@@ -85,82 +85,113 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText101"
+
+            <LinearLayout
+                android:id="@+id/l1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_below="@+id/spinner1"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:imeOptions="actionDone"
-                android:background="@android:drawable/editbox_background"/>
+                android:orientation="horizontal">
 
-            <TextView
-                android:text="@string/tage"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/textView101"
-                android:textSize="16sp"
-                android:textColor="@android:color/black"
-                android:layout_alignBaseline="@+id/editText101"
-                android:layout_alignBottom="@+id/editText101"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText201"
-                android:layout_below="@+id/editText101"
-                android:layout_toStartOf="@+id/ibtn1"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:imeOptions="actionDone"
-                android:background="@android:drawable/editbox_background"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-            <TextView
-                android:text="@string/woche"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/textView201"
-                android:textSize="16sp"
-                android:textColor="@android:color/black"
-                android:layout_alignBaseline="@+id/editText201"
-                android:layout_alignBottom="@+id/editText201"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText301"
-                android:layout_below="@+id/editText201"
-                android:layout_toStartOf="@+id/ibtn1"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:imeOptions="actionDone"
-                android:background="@android:drawable/editbox_background"/>
+                    <TextView
+                        android:id="@+id/textView101"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@+id/editText101"
+                        android:layout_alignBottom="@+id/editText101"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/tage"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
 
-            <TextView
-                android:text="@string/monat"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/textView103"
-                android:textSize="16sp"
-                android:textColor="@android:color/black"
-                android:layout_alignBaseline="@+id/editText301"
-                android:layout_alignBottom="@+id/editText301"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"/>
+                    <TextView
+                        android:id="@+id/textView201"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@+id/editText201"
+                        android:layout_alignBottom="@+id/editText201"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/woche"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/textView103"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@+id/editText301"
+                        android:layout_alignBottom="@+id/editText301"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/monat"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/editText101"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/spinner1"
+                        android:background="@android:drawable/editbox_background"
+                        android:ems="10"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"/>
+
+                    <EditText
+                        android:id="@+id/editText201"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/editText101"
+                        android:layout_toStartOf="@+id/ibtn1"
+                        android:background="@android:drawable/editbox_background"
+                        android:ems="10"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"/>
+
+                    <EditText
+                        android:id="@+id/editText301"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/editText201"
+                        android:layout_toStartOf="@+id/ibtn1"
+                        android:background="@android:drawable/editbox_background"
+                        android:ems="10"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"/>
+                </LinearLayout>
+
+            </LinearLayout>
             <View
                 android:id="@+id/view1"
                 android:layout_width="fill_parent"
                 android:layout_height="1dp"
-                android:layout_below="@id/editText301"
+                android:layout_below="@id/l1"
                 android:layout_marginBottom="20dp"
                 android:background="#000000"/>
             <TextView
@@ -183,94 +214,125 @@
                 android:background="@android:drawable/checkbox_off_background"
                 android:text="@string/qest"
                 android:textSize="18dp"/>
+
             <Spinner
                 android:id="@+id/spinner2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:entries="@array/entselbststaendig_array"
-                android:layout_below="@+id/textView2"
+                android:layout_alignParentEnd="true"
                 android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
                 android:layout_alignParentStart="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText102"
-                android:layout_below="@+id/spinner2"
-                android:layout_toStartOf="@+id/ibtn1"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:imeOptions="actionDone"
-                android:background="@android:drawable/editbox_background"/>
+                android:layout_below="@+id/textView2"
+                android:entries="@array/entselbststaendig_array"/>
 
-            <TextView
-                android:text="@string/tage"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/l2"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/textView102"
-                android:textSize="16sp"
-                android:textColor="@android:color/black"
-                android:layout_alignBaseline="@+id/editText102"
-                android:layout_alignBottom="@+id/editText102"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText202"
-                android:layout_below="@+id/editText102"
-                android:layout_toStartOf="@+id/ibtn1"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:imeOptions="actionDone"
-                android:background="@android:drawable/editbox_background"/>
+                android:layout_below="@id/spinner2"
+                android:orientation="horizontal">
 
-            <TextView
-                android:text="@string/woche"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/textView202"
-                android:textSize="16sp"
-                android:textColor="@android:color/black"
-                android:layout_alignBaseline="@+id/editText202"
-                android:layout_alignBottom="@+id/editText202"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText302"
-                android:layout_below="@+id/editText202"
-                android:layout_toStartOf="@+id/ibtn1"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:imeOptions="actionDone"
-                android:background="@android:drawable/editbox_background"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-            <TextView
-                android:text="@string/monat"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/textView203"
-                android:textSize="16sp"
-                android:textColor="@android:color/black"
-                android:layout_alignBaseline="@+id/editText302"
-                android:layout_alignBottom="@+id/editText302"
-                android:imeOptions="actionDone"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"/>
+                    <TextView
+                        android:id="@+id/textView102"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@+id/editText102"
+                        android:layout_alignBottom="@+id/editText102"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/tage"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/textView202"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@+id/editText202"
+                        android:layout_alignBottom="@+id/editText202"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/woche"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/textView203"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@+id/editText302"
+                        android:layout_alignBottom="@+id/editText302"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:imeOptions="actionDone"
+                        android:text="@string/monat"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/editText102"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/spinner2"
+                        android:layout_toStartOf="@+id/ibtn1"
+                        android:background="@android:drawable/editbox_background"
+                        android:ems="10"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"/>
+
+                    <EditText
+                        android:id="@+id/editText202"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/editText102"
+                        android:layout_toStartOf="@+id/ibtn1"
+                        android:background="@android:drawable/editbox_background"
+                        android:ems="10"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"/>
+
+                    <EditText
+                        android:id="@+id/editText302"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/editText202"
+                        android:layout_toStartOf="@+id/ibtn1"
+                        android:background="@android:drawable/editbox_background"
+                        android:ems="10"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"/>
+                </LinearLayout>
+            </LinearLayout>
+
             <View
                 android:id="@+id/view2"
                 android:layout_width="fill_parent"
                 android:layout_height="1dp"
-                android:layout_below="@id/editText302"
+                android:layout_below="@id/l2"
                 android:layout_marginBottom="20dp"
                 android:background="#000000"/>
             <TextView
@@ -303,83 +365,113 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText103"
-                android:layout_below="@+id/spinner3"
-                android:layout_toStartOf="@+id/ibtn1"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:imeOptions="actionDone"
-                android:background="@android:drawable/editbox_background"/>
 
-            <TextView
-                android:text="@string/tage"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/l3"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@id/textView103"
-                android:textSize="16sp"
-                android:textColor="@android:color/black"
-                android:layout_alignBaseline="@+id/editText103"
-                android:layout_alignBottom="@+id/editText103"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText203"
-                android:layout_below="@+id/editText103"
-                android:layout_toStartOf="@+id/ibtn1"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:imeOptions="actionDone"
-                android:background="@android:drawable/editbox_background"/>
+                android:layout_below="@id/spinner3"
+                android:orientation="horizontal">
 
-            <TextView
-                android:text="@string/woche"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@id/textView203"
-                android:textSize="16sp"
-                android:textColor="@android:color/black"
-                android:layout_alignBaseline="@+id/editText203"
-                android:layout_alignBottom="@+id/editText203"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText303"
-                android:layout_below="@+id/editText203"
-                android:layout_toStartOf="@+id/ibtn1"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:imeOptions="actionDone"
-                android:background="@android:drawable/editbox_background"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-            <TextView
-                android:text="@string/monat"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/textView303"
-                android:textSize="16sp"
-                android:textColor="@android:color/black"
-                android:layout_alignBaseline="@+id/editText303"
-                android:layout_alignBottom="@+id/editText303"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"/>
+                    <TextView
+                        android:id="@id/textView103"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@+id/editText103"
+                        android:layout_alignBottom="@+id/editText103"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/tage"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@id/textView203"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@+id/editText203"
+                        android:layout_alignBottom="@+id/editText203"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/woche"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/textView303"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@+id/editText303"
+                        android:layout_alignBottom="@+id/editText303"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/monat"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/editText103"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/spinner3"
+                        android:layout_toStartOf="@+id/ibtn1"
+                        android:background="@android:drawable/editbox_background"
+                        android:ems="10"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"/>
+
+                    <EditText
+                        android:id="@+id/editText203"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/editText103"
+                        android:layout_toStartOf="@+id/ibtn1"
+                        android:background="@android:drawable/editbox_background"
+                        android:ems="10"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"/>
+
+                    <EditText
+                        android:id="@+id/editText303"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/editText203"
+                        android:layout_toStartOf="@+id/ibtn1"
+                        android:background="@android:drawable/editbox_background"
+                        android:ems="10"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"/>
+                </LinearLayout>
+            </LinearLayout>
+
             <View
                 android:id="@+id/view3"
                 android:layout_width="fill_parent"
                 android:layout_height="1dp"
-                android:layout_below="@id/editText303"
+                android:layout_below="@id/l3"
                 android:layout_marginBottom="20dp"
                 android:background="#000000"/>
             <TextView
@@ -402,93 +494,124 @@
                 android:background="@android:drawable/checkbox_off_background"
                 android:text="@string/qest"
                 android:textSize="18dp"/>
+
             <Spinner
                 android:id="@+id/spinner4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:entries="@array/entselbststaendig_array"
-                android:layout_below="@+id/textView4"
+                android:layout_alignParentEnd="true"
                 android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
                 android:layout_alignParentStart="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText104"
-                android:layout_below="@+id/spinner4"
-                android:layout_toStartOf="@+id/ibtn1"
-                android:layout_alignParentRight="true"
-                android:imeOptions="actionDone"
-                android:layout_alignParentEnd="true"
-                android:background="@android:drawable/editbox_background"/>
+                android:layout_below="@+id/textView4"
+                android:entries="@array/entselbststaendig_array"/>
 
-            <TextView
-                android:text="@string/tage"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/l4"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/textView104"
-                android:textSize="16sp"
-                android:textColor="@android:color/black"
-                android:layout_alignBaseline="@+id/editText104"
-                android:layout_alignBottom="@+id/editText104"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText204"
-                android:layout_below="@+id/editText104"
-                android:layout_toStartOf="@+id/ibtn1"
-                android:layout_alignParentRight="true"
-                android:imeOptions="actionDone"
-                android:layout_alignParentEnd="true"
-                android:background="@android:drawable/editbox_background"/>
+                android:layout_below="@id/spinner4"
+                android:orientation="horizontal">
 
-            <TextView
-                android:text="@string/woche"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/textView204"
-                android:textSize="16sp"
-                android:textColor="@android:color/black"
-                android:layout_alignBaseline="@+id/editText204"
-                android:layout_alignBottom="@+id/editText204"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText304"
-                android:layout_below="@+id/editText204"
-                android:layout_toStartOf="@+id/ibtn1"
-                android:layout_alignParentRight="true"
-                android:imeOptions="actionDone"
-                android:layout_alignParentEnd="true"
-                android:background="@android:drawable/editbox_background"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-            <TextView
-                android:text="@string/monat"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/textView304"
-                android:textSize="16sp"
-                android:textColor="@android:color/black"
-                android:layout_alignBaseline="@+id/editText304"
-                android:layout_alignBottom="@+id/editText304"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"/>
+                    <TextView
+                        android:id="@+id/textView104"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@+id/editText104"
+                        android:layout_alignBottom="@+id/editText104"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/tage"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/textView204"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@+id/editText204"
+                        android:layout_alignBottom="@+id/editText204"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/woche"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/textView304"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@+id/editText304"
+                        android:layout_alignBottom="@+id/editText304"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/monat"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/editText104"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/spinner4"
+                        android:layout_toStartOf="@+id/ibtn1"
+                        android:background="@android:drawable/editbox_background"
+                        android:ems="10"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"/>
+
+                    <EditText
+                        android:id="@+id/editText204"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/editText104"
+                        android:layout_toStartOf="@+id/ibtn1"
+                        android:background="@android:drawable/editbox_background"
+                        android:ems="10"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"/>
+
+                    <EditText
+                        android:id="@+id/editText304"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/editText204"
+                        android:layout_toStartOf="@+id/ibtn1"
+                        android:background="@android:drawable/editbox_background"
+                        android:ems="10"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"/>
+                </LinearLayout>
+            </LinearLayout>
+
             <View
                 android:id="@+id/view4"
                 android:layout_width="fill_parent"
                 android:layout_height="1dp"
-                android:layout_below="@id/editText304"
+                android:layout_below="@id/l4"
                 android:layout_marginBottom="20dp"
                 android:background="#000000"/>
             <TextView
@@ -521,83 +644,113 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText105"
-                android:layout_below="@+id/spinner5"
-                android:layout_toStartOf="@+id/ibtn1"
-                android:imeOptions="actionDone"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:background="@android:drawable/editbox_background"/>
 
-            <TextView
-                android:text="@string/tage"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/l5"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/textView105"
-                android:textSize="16sp"
-                android:textColor="@android:color/black"
-                android:layout_alignBaseline="@+id/editText105"
-                android:layout_alignBottom="@+id/editText105"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText205"
-                android:layout_below="@+id/editText105"
-                android:imeOptions="actionDone"
-                android:layout_toStartOf="@+id/ibtn1"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:background="@android:drawable/editbox_background"/>
+                android:layout_below="@id/spinner5"
+                android:orientation="horizontal">
 
-            <TextView
-                android:text="@string/woche"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/textView205"
-                android:textSize="16sp"
-                android:textColor="@android:color/black"
-                android:layout_alignBaseline="@+id/editText205"
-                android:layout_alignBottom="@+id/editText205"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText305"
-                android:layout_below="@+id/editText205"
-                android:imeOptions="actionDone"
-                android:layout_toStartOf="@+id/ibtn1"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:background="@android:drawable/editbox_background"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-            <TextView
-                android:text="@string/monat"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/textView305"
-                android:textSize="16sp"
-                android:textColor="@android:color/black"
-                android:layout_alignBaseline="@+id/editText305"
-                android:layout_alignBottom="@+id/editText305"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"/>
+                    <TextView
+                        android:id="@+id/textView105"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@+id/editText105"
+                        android:layout_alignBottom="@+id/editText105"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/tage"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/textView205"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@+id/editText205"
+                        android:layout_alignBottom="@+id/editText205"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/woche"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/textView305"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@+id/editText305"
+                        android:layout_alignBottom="@+id/editText305"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/monat"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/editText105"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/spinner5"
+                        android:layout_toStartOf="@+id/ibtn1"
+                        android:background="@android:drawable/editbox_background"
+                        android:ems="10"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"/>
+
+                    <EditText
+                        android:id="@+id/editText205"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/editText105"
+                        android:layout_toStartOf="@+id/ibtn1"
+                        android:background="@android:drawable/editbox_background"
+                        android:ems="10"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"/>
+
+                    <EditText
+                        android:id="@+id/editText305"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/editText205"
+                        android:layout_toStartOf="@+id/ibtn1"
+                        android:background="@android:drawable/editbox_background"
+                        android:ems="10"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"/>
+                </LinearLayout>
+            </LinearLayout>
+
             <View
                 android:id="@+id/view5"
                 android:layout_width="fill_parent"
                 android:layout_height="1dp"
-                android:layout_below="@id/editText305"
+                android:layout_below="@id/l5"
                 android:layout_marginBottom="20dp"
                 android:background="#000000"/>
             <TextView
@@ -630,83 +783,113 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText106"
-                android:imeOptions="actionDone"
-                android:layout_below="@+id/spinner6"
-                android:layout_toStartOf="@+id/ibtn1"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:background="@android:drawable/editbox_background"/>
 
-            <TextView
-                android:text="@string/tage"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/l6"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/textView106"
-                android:textSize="16sp"
-                android:textColor="@android:color/black"
-                android:layout_alignBaseline="@+id/editText106"
-                android:layout_alignBottom="@+id/editText106"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText206"
-                android:imeOptions="actionDone"
-                android:layout_below="@+id/editText106"
-                android:layout_toStartOf="@+id/ibtn1"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:background="@android:drawable/editbox_background"/>
+                android:layout_below="@id/spinner6"
+                android:orientation="horizontal">
 
-            <TextView
-                android:text="@string/woche"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/textView206"
-                android:textSize="16sp"
-                android:textColor="@android:color/black"
-                android:layout_alignBaseline="@+id/editText206"
-                android:layout_alignBottom="@+id/editText206"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText306"
-                android:imeOptions="actionDone"
-                android:layout_below="@+id/editText206"
-                android:layout_toStartOf="@+id/ibtn1"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:background="@android:drawable/editbox_background"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-            <TextView
-                android:text="@string/monat"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/textView306"
-                android:textSize="16sp"
-                android:textColor="@android:color/black"
-                android:layout_alignBaseline="@+id/editText306"
-                android:layout_alignBottom="@+id/editText306"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"/>
+                    <TextView
+                        android:id="@+id/textView106"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@+id/editText106"
+                        android:layout_alignBottom="@+id/editText106"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/tage"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/textView206"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@+id/editText206"
+                        android:layout_alignBottom="@+id/editText206"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/woche"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/textView306"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@+id/editText306"
+                        android:layout_alignBottom="@+id/editText306"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/monat"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/editText106"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/spinner6"
+                        android:layout_toStartOf="@+id/ibtn1"
+                        android:background="@android:drawable/editbox_background"
+                        android:ems="10"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"/>
+
+                    <EditText
+                        android:id="@+id/editText206"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/editText106"
+                        android:layout_toStartOf="@+id/ibtn1"
+                        android:background="@android:drawable/editbox_background"
+                        android:ems="10"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"/>
+
+                    <EditText
+                        android:id="@+id/editText306"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/editText206"
+                        android:layout_toStartOf="@+id/ibtn1"
+                        android:background="@android:drawable/editbox_background"
+                        android:ems="10"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"/>
+                </LinearLayout>
+            </LinearLayout>
+
             <View
                 android:id="@+id/view6"
                 android:layout_width="fill_parent"
                 android:layout_height="1dp"
-                android:layout_below="@id/editText306"
+                android:layout_below="@id/l6"
                 android:layout_marginBottom="20dp"
                 android:background="#000000"/>
             <TextView
@@ -739,83 +922,113 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText107"
-                android:layout_below="@+id/spinner7"
-                android:layout_toStartOf="@+id/ibtn1"
-                android:imeOptions="actionDone"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:background="@android:drawable/editbox_background"/>
 
-            <TextView
-                android:text="@string/tage"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/l7"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/textView107"
-                android:textSize="16sp"
-                android:textColor="@android:color/black"
-                android:layout_alignBaseline="@+id/editText107"
-                android:layout_alignBottom="@+id/editText107"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText207"
-                android:layout_below="@+id/editText107"
-                android:imeOptions="actionDone"
-                android:layout_toStartOf="@+id/ibtn1"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:background="@android:drawable/editbox_background"/>
+                android:layout_below="@id/spinner7"
+                android:orientation="horizontal">
 
-            <TextView
-                android:text="@string/woche"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/textView207"
-                android:textSize="16sp"
-                android:textColor="@android:color/black"
-                android:layout_alignBaseline="@+id/editText207"
-                android:layout_alignBottom="@+id/editText207"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText307"
-                android:layout_below="@+id/editText207"
-                android:imeOptions="actionDone"
-                android:layout_toStartOf="@+id/ibtn1"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:background="@android:drawable/editbox_background"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-            <TextView
-                android:text="@string/monat"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/textView307"
-                android:textSize="16sp"
-                android:textColor="@android:color/black"
-                android:layout_alignBaseline="@+id/editText307"
-                android:layout_alignBottom="@+id/editText307"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"/>
+                    <TextView
+                        android:id="@+id/textView107"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@+id/editText107"
+                        android:layout_alignBottom="@+id/editText107"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/tage"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/textView207"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@+id/editText207"
+                        android:layout_alignBottom="@+id/editText207"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/woche"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/textView307"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@+id/editText307"
+                        android:layout_alignBottom="@+id/editText307"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/monat"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/editText107"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/spinner7"
+                        android:layout_toStartOf="@+id/ibtn1"
+                        android:background="@android:drawable/editbox_background"
+                        android:ems="10"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"/>
+
+                    <EditText
+                        android:id="@+id/editText207"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/editText107"
+                        android:layout_toStartOf="@+id/ibtn1"
+                        android:background="@android:drawable/editbox_background"
+                        android:ems="10"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"/>
+
+                    <EditText
+                        android:id="@+id/editText307"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/editText207"
+                        android:layout_toStartOf="@+id/ibtn1"
+                        android:background="@android:drawable/editbox_background"
+                        android:ems="10"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"/>
+                </LinearLayout>
+            </LinearLayout>
+
             <View
                 android:id="@+id/view7"
                 android:layout_width="fill_parent"
                 android:layout_height="1dp"
-                android:layout_below="@id/editText307"
+                android:layout_below="@id/l7"
                 android:layout_marginBottom="20dp"
                 android:background="#000000"/>
             <TextView
@@ -848,83 +1061,113 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText108"
-                android:layout_below="@+id/spinner8"
-                android:layout_toStartOf="@+id/ibtn1"
-                android:imeOptions="actionDone"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:background="@android:drawable/editbox_background"/>
 
-            <TextView
-                android:text="@string/tage"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/l8"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/textView108"
-                android:textSize="16sp"
-                android:textColor="@android:color/black"
-                android:layout_alignBaseline="@+id/editText108"
-                android:layout_alignBottom="@+id/editText108"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText208"
-                android:layout_below="@+id/editText108"
-                android:imeOptions="actionDone"
-                android:layout_toStartOf="@+id/ibtn1"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:background="@android:drawable/editbox_background"/>
+                android:layout_below="@id/spinner8"
+                android:orientation="horizontal">
 
-            <TextView
-                android:text="@string/woche"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/textView208"
-                android:textSize="16sp"
-                android:textColor="@android:color/black"
-                android:layout_alignBaseline="@+id/editText208"
-                android:layout_alignBottom="@+id/editText208"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText308"
-                android:layout_below="@+id/editText208"
-                android:imeOptions="actionDone"
-                android:layout_toStartOf="@+id/ibtn1"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:background="@android:drawable/editbox_background"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-            <TextView
-                android:text="@string/monat"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/textView308"
-                android:textSize="16sp"
-                android:textColor="@android:color/black"
-                android:layout_alignBaseline="@+id/editText308"
-                android:layout_alignBottom="@+id/editText308"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"/>
+                    <TextView
+                        android:id="@+id/textView108"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@+id/editText108"
+                        android:layout_alignBottom="@+id/editText108"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/tage"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/textView208"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@+id/editText208"
+                        android:layout_alignBottom="@+id/editText208"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/woche"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/textView308"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@+id/editText308"
+                        android:layout_alignBottom="@+id/editText308"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/monat"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/editText108"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/spinner8"
+                        android:layout_toStartOf="@+id/ibtn1"
+                        android:background="@android:drawable/editbox_background"
+                        android:ems="10"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"/>
+
+                    <EditText
+                        android:id="@+id/editText208"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/editText108"
+                        android:layout_toStartOf="@+id/ibtn1"
+                        android:background="@android:drawable/editbox_background"
+                        android:ems="10"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"/>
+
+                    <EditText
+                        android:id="@+id/editText308"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/editText208"
+                        android:layout_toStartOf="@+id/ibtn1"
+                        android:background="@android:drawable/editbox_background"
+                        android:ems="10"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"/>
+                </LinearLayout>
+            </LinearLayout>
+
             <View
                 android:id="@+id/view8"
                 android:layout_width="fill_parent"
                 android:layout_height="1dp"
-                android:layout_below="@id/editText308"
+                android:layout_below="@id/l8"
                 android:layout_marginBottom="20dp"
                 android:background="#000000"/>
             <TextView
@@ -957,83 +1200,114 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText109"
-                android:imeOptions="actionDone"
-                android:layout_below="@+id/spinner9"
-                android:layout_toStartOf="@+id/ibtn1"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:background="@android:drawable/editbox_background"/>
 
-            <TextView
-                android:text="@string/tage"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/l9"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/textView109"
-                android:textSize="16sp"
-                android:textColor="@android:color/black"
-                android:layout_alignBaseline="@+id/editText109"
-                android:layout_alignBottom="@+id/editText109"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText209"
-                android:layout_below="@+id/editText109"
-                android:imeOptions="actionDone"
-                android:layout_toStartOf="@+id/ibtn1"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:background="@android:drawable/editbox_background"/>
+                android:layout_below="@id/spinner9"
+                android:orientation="horizontal">
 
-            <TextView
-                android:text="@string/woche"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/textView209"
-                android:textSize="16sp"
-                android:textColor="@android:color/black"
-                android:layout_alignBaseline="@+id/editText209"
-                android:layout_alignBottom="@+id/editText209"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText309"
-                android:layout_below="@+id/editText209"
-                android:imeOptions="actionDone"
-                android:layout_toStartOf="@+id/ibtn1"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:background="@android:drawable/editbox_background"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-            <TextView
-                android:text="@string/monat"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/textView309"
-                android:textSize="16sp"
-                android:textColor="@android:color/black"
-                android:layout_alignBaseline="@+id/editText309"
-                android:layout_alignBottom="@+id/editText309"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"/>
+                    <TextView
+                        android:id="@+id/textView109"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@+id/editText109"
+                        android:layout_alignBottom="@+id/editText109"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/tage"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/textView209"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@+id/editText209"
+                        android:layout_alignBottom="@+id/editText209"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/woche"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/textView309"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@+id/editText309"
+                        android:layout_alignBottom="@+id/editText309"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/monat"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/editText109"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/spinner9"
+                        android:layout_toStartOf="@+id/ibtn1"
+                        android:background="@android:drawable/editbox_background"
+                        android:ems="10"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"/>
+
+                    <EditText
+                        android:id="@+id/editText209"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/editText109"
+                        android:layout_toStartOf="@+id/ibtn1"
+                        android:background="@android:drawable/editbox_background"
+                        android:ems="10"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"/>
+
+                    <EditText
+                        android:id="@+id/editText309"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/editText209"
+                        android:layout_toStartOf="@+id/ibtn1"
+                        android:background="@android:drawable/editbox_background"
+                        android:ems="10"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
             <View
                 android:id="@+id/view9"
                 android:layout_width="fill_parent"
                 android:layout_height="1dp"
-                android:layout_below="@id/editText309"
+                android:layout_below="@id/l9"
                 android:layout_marginBottom="20dp"
                 android:background="#000000"/>
             <TextView
@@ -1056,6 +1330,7 @@
                 android:background="@android:drawable/checkbox_off_background"
                 android:text="@string/qest"
                 android:textSize="18dp"/>
+
             <Spinner
                 android:id="@+id/spinner10"
                 android:layout_width="wrap_content"
@@ -1066,83 +1341,113 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText110"
-                android:imeOptions="actionDone"
-                android:layout_below="@+id/spinner10"
-                android:layout_toStartOf="@+id/ibtn1"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:background="@android:drawable/editbox_background"/>
 
-            <TextView
-                android:text="@string/tage"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/l10"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/textView110"
-                android:textSize="16sp"
-                android:textColor="@android:color/black"
-                android:layout_alignBaseline="@+id/editText110"
-                android:layout_alignBottom="@+id/editText110"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText210"
-                android:imeOptions="actionDone"
-                android:layout_below="@+id/editText110"
-                android:layout_toStartOf="@+id/ibtn1"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:background="@android:drawable/editbox_background"/>
+                android:layout_below="@id/spinner10"
+                android:orientation="horizontal">
 
-            <TextView
-                android:text="@string/woche"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/textView210"
-                android:textSize="16sp"
-                android:textColor="@android:color/black"
-                android:layout_alignBaseline="@+id/editText210"
-                android:layout_alignBottom="@+id/editText210"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText310"
-                android:imeOptions="actionDone"
-                android:layout_below="@+id/editText210"
-                android:layout_toStartOf="@+id/ibtn1"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:background="@android:drawable/editbox_background"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-            <TextView
-                android:text="@string/monat"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/textView310"
-                android:textSize="16sp"
-                android:textColor="@android:color/black"
-                android:layout_alignBaseline="@+id/editText310"
-                android:layout_alignBottom="@+id/editText310"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"/>
+                    <TextView
+                        android:id="@+id/textView110"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@+id/editText110"
+                        android:layout_alignBottom="@+id/editText110"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/tage"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/textView210"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@+id/editText210"
+                        android:layout_alignBottom="@+id/editText210"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/woche"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/textView310"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@+id/editText310"
+                        android:layout_alignBottom="@+id/editText310"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/monat"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/editText110"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/spinner10"
+                        android:layout_toStartOf="@+id/ibtn1"
+                        android:background="@android:drawable/editbox_background"
+                        android:ems="10"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"/>
+
+                    <EditText
+                        android:id="@+id/editText210"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/editText110"
+                        android:layout_toStartOf="@+id/ibtn1"
+                        android:background="@android:drawable/editbox_background"
+                        android:ems="10"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"/>
+
+                    <EditText
+                        android:id="@+id/editText310"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/editText210"
+                        android:layout_toStartOf="@+id/ibtn1"
+                        android:background="@android:drawable/editbox_background"
+                        android:ems="10"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"/>
+                </LinearLayout>
+            </LinearLayout>
+
             <View
                 android:id="@+id/view10"
                 android:layout_width="fill_parent"
                 android:layout_height="1dp"
-                android:layout_below="@id/editText310"
+                android:layout_below="@id/l10"
                 android:layout_marginBottom="20dp"
                 android:background="#000000"/>
             <TextView
@@ -1175,83 +1480,113 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText111"
-                android:imeOptions="actionDone"
-                android:layout_below="@+id/spinner11"
-                android:layout_toStartOf="@+id/ibtn1"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:background="@android:drawable/editbox_background"/>
 
-            <TextView
-                android:text="@string/tage"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/l11"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/textView111"
-                android:textSize="16sp"
-                android:textColor="@android:color/black"
-                android:layout_alignBaseline="@+id/editText111"
-                android:layout_alignBottom="@+id/editText111"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText211"
-                android:imeOptions="actionDone"
-                android:layout_below="@+id/editText111"
-                android:layout_toStartOf="@+id/ibtn1"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:background="@android:drawable/editbox_background"/>
+                android:layout_below="@id/spinner11"
+                android:orientation="horizontal">
 
-            <TextView
-                android:text="@string/woche"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/textView211"
-                android:textSize="16sp"
-                android:textColor="@android:color/black"
-                android:layout_alignBaseline="@+id/editText211"
-                android:layout_alignBottom="@+id/editText211"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText311"
-                android:imeOptions="actionDone"
-                android:layout_below="@+id/editText211"
-                android:layout_toStartOf="@+id/ibtn1"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:background="@android:drawable/editbox_background"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-            <TextView
-                android:text="@string/monat"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/textView311"
-                android:textSize="16sp"
-                android:textColor="@android:color/black"
-                android:layout_alignBaseline="@+id/editText311"
-                android:layout_alignBottom="@+id/editText311"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"/>
+                    <TextView
+                        android:id="@+id/textView111"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@+id/editText111"
+                        android:layout_alignBottom="@+id/editText111"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/tage"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/textView211"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@+id/editText211"
+                        android:layout_alignBottom="@+id/editText211"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/woche"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/textView311"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@+id/editText311"
+                        android:layout_alignBottom="@+id/editText311"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/monat"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/editText111"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/spinner11"
+                        android:layout_toStartOf="@+id/ibtn1"
+                        android:background="@android:drawable/editbox_background"
+                        android:ems="10"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"/>
+
+                    <EditText
+                        android:id="@+id/editText211"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/editText111"
+                        android:layout_toStartOf="@+id/ibtn1"
+                        android:background="@android:drawable/editbox_background"
+                        android:ems="10"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"/>
+
+                    <EditText
+                        android:id="@+id/editText311"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/editText211"
+                        android:layout_toStartOf="@+id/ibtn1"
+                        android:background="@android:drawable/editbox_background"
+                        android:ems="10"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"/>
+                </LinearLayout>
+            </LinearLayout>
+
             <View
                 android:id="@+id/view11"
                 android:layout_width="fill_parent"
                 android:layout_height="1dp"
-                android:layout_below="@id/editText311"
+                android:layout_below="@id/l11"
                 android:layout_marginBottom="20dp"
                 android:background="#000000"/>
             <TextView
@@ -1284,83 +1619,114 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText112"
-                android:imeOptions="actionDone"
-                android:layout_below="@+id/spinner12"
-                android:layout_toStartOf="@+id/ibtn1"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:background="@android:drawable/editbox_background"/>
 
-            <TextView
-                android:text="@string/tage"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/l12"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/textView112"
-                android:textSize="16sp"
-                android:textColor="@android:color/black"
-                android:layout_alignBaseline="@+id/editText112"
-                android:layout_alignBottom="@+id/editText112"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText212"
-                android:imeOptions="actionDone"
-                android:layout_below="@+id/editText112"
-                android:layout_toStartOf="@+id/ibtn1"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:background="@android:drawable/editbox_background"/>
+                android:layout_below="@id/spinner12"
+                android:orientation="horizontal">
 
-            <TextView
-                android:text="@string/woche"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/textView212"
-                android:textSize="16sp"
-                android:textColor="@android:color/black"
-                android:layout_alignBaseline="@+id/editText212"
-                android:layout_alignBottom="@+id/editText212"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText312"
-                android:imeOptions="actionDone"
-                android:layout_below="@+id/editText212"
-                android:layout_toStartOf="@+id/ibtn1"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:background="@android:drawable/editbox_background"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-            <TextView
-                android:text="@string/monat"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/textView312"
-                android:textSize="16sp"
-                android:textColor="@android:color/black"
-                android:layout_alignBaseline="@+id/editText312"
-                android:layout_alignBottom="@+id/editText312"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"/>
+                    <TextView
+                        android:id="@+id/textView112"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@+id/editText112"
+                        android:layout_alignBottom="@+id/editText112"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/tage"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/textView212"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@+id/editText212"
+                        android:layout_alignBottom="@+id/editText212"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/woche"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/textView312"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@+id/editText312"
+                        android:layout_alignBottom="@+id/editText312"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/monat"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/editText112"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/spinner12"
+                        android:layout_toStartOf="@+id/ibtn1"
+                        android:background="@android:drawable/editbox_background"
+                        android:ems="10"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"/>
+
+                    <EditText
+                        android:id="@+id/editText212"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/editText112"
+                        android:layout_toStartOf="@+id/ibtn1"
+                        android:background="@android:drawable/editbox_background"
+                        android:ems="10"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"/>
+
+                    <EditText
+                        android:id="@+id/editText312"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/editText212"
+                        android:layout_toStartOf="@+id/ibtn1"
+                        android:background="@android:drawable/editbox_background"
+                        android:ems="10"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
             <View
                 android:id="@+id/view12"
                 android:layout_width="fill_parent"
                 android:layout_height="1dp"
-                android:layout_below="@id/editText312"
+                android:layout_below="@id/l12"
                 android:layout_marginBottom="20dp"
                 android:background="#000000"/>
             <TextView
@@ -1393,60 +1759,87 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText113"
-                android:imeOptions="actionDone"
-                android:layout_below="@+id/spinner13"
-                android:layout_toStartOf="@+id/ibtn1"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:background="@android:drawable/editbox_background"/>
 
-            <TextView
-                android:text="@string/woche"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/l13"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/textView113"
-                android:textSize="16sp"
-                android:textColor="@android:color/black"
-                android:layout_alignBaseline="@+id/editText113"
-                android:layout_alignBottom="@+id/editText113"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText213"
-                android:imeOptions="actionDone"
-                android:layout_below="@+id/editText113"
-                android:layout_toStartOf="@+id/ibtn1"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:background="@android:drawable/editbox_background"/>
+                android:layout_below="@id/spinner13"
+                android:orientation="horizontal">
 
-            <TextView
-                android:text="@string/monat"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/textView213"
-                android:textSize="16sp"
-                android:textColor="@android:color/black"
-                android:layout_alignBaseline="@+id/editText213"
-                android:layout_alignBottom="@+id/editText213"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView113"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@+id/editText113"
+                        android:layout_alignBottom="@+id/editText113"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/woche"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/textView213"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@+id/editText213"
+                        android:layout_alignBottom="@+id/editText213"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/monat"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/editText113"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/spinner13"
+                        android:layout_toStartOf="@+id/ibtn1"
+                        android:background="@android:drawable/editbox_background"
+                        android:ems="10"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"/>
+
+                    <EditText
+                        android:id="@+id/editText213"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/editText113"
+                        android:layout_toStartOf="@+id/ibtn1"
+                        android:background="@android:drawable/editbox_background"
+                        android:ems="10"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"/>
+                </LinearLayout>
+
+            </LinearLayout>
 
             <View
                 android:id="@+id/view13"
                 android:layout_width="fill_parent"
                 android:layout_height="1dp"
-                android:layout_below="@id/editText213"
+                android:layout_below="@id/l13"
                 android:layout_marginBottom="20dp"
                 android:background="#000000"/>
             <TextView
@@ -1479,60 +1872,86 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText114"
-                android:imeOptions="actionDone"
-                android:layout_below="@+id/spinner14"
-                android:layout_toStartOf="@+id/ibtn1"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:background="@android:drawable/editbox_background"/>
 
-            <TextView
-                android:text="@string/woche"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/l14"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/textView114"
-                android:textSize="16sp"
-                android:textColor="@android:color/black"
-                android:layout_alignBaseline="@+id/editText114"
-                android:layout_alignBottom="@+id/editText114"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText214"
-                android:imeOptions="actionDone"
-                android:layout_below="@+id/editText114"
-                android:layout_toStartOf="@+id/ibtn1"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:background="@android:drawable/editbox_background"/>
+                android:layout_below="@id/spinner14"
+                android:orientation="horizontal">
 
-            <TextView
-                android:text="@string/monat"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/textView214"
-                android:textSize="16sp"
-                android:textColor="@android:color/black"
-                android:layout_alignBaseline="@+id/editText214"
-                android:layout_alignBottom="@+id/editText214"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView114"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@+id/editText114"
+                        android:layout_alignBottom="@+id/editText114"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/woche"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/textView214"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@+id/editText214"
+                        android:layout_alignBottom="@+id/editText214"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/monat"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/editText114"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/spinner14"
+                        android:layout_toStartOf="@+id/ibtn1"
+                        android:background="@android:drawable/editbox_background"
+                        android:ems="10"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"/>
+
+                    <EditText
+                        android:id="@+id/editText214"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/editText114"
+                        android:layout_toStartOf="@+id/ibtn1"
+                        android:background="@android:drawable/editbox_background"
+                        android:ems="10"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"/>
+                </LinearLayout>
+            </LinearLayout>
 
             <View
                 android:id="@+id/view14"
                 android:layout_width="fill_parent"
                 android:layout_height="1dp"
-                android:layout_below="@id/editText214"
+                android:layout_below="@id/l14"
                 android:layout_marginBottom="20dp"
                 android:background="#000000"/>
             <TextView
@@ -1565,59 +1984,87 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText115"
-                android:imeOptions="actionDone"
-                android:layout_below="@+id/spinner15"
-                android:layout_toStartOf="@+id/ibtn1"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:background="@android:drawable/editbox_background"/>
 
-            <TextView
-                android:text="@string/woche"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/l15"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/textView115"
-                android:textSize="16sp"
-                android:textColor="@android:color/black"
-                android:layout_alignBaseline="@+id/editText115"
-                android:layout_alignBottom="@+id/editText115"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText215"
-                android:imeOptions="actionDone"
-                android:layout_below="@+id/editText115"
-                android:layout_toStartOf="@+id/ibtn1"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:background="@android:drawable/editbox_background"/>
+                android:layout_below="@id/spinner15"
+                android:orientation="horizontal">
 
-            <TextView
-                android:text="@string/monat"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/textView215"
-                android:textSize="16sp"
-                android:textColor="@android:color/black"
-                android:layout_alignBaseline="@+id/editText215"
-                android:layout_alignBottom="@+id/editText215"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView115"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@+id/editText115"
+                        android:layout_alignBottom="@+id/editText115"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/woche"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/textView215"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@+id/editText215"
+                        android:layout_alignBottom="@+id/editText215"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/monat"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/editText115"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/spinner15"
+                        android:layout_toStartOf="@+id/ibtn1"
+                        android:background="@android:drawable/editbox_background"
+                        android:ems="10"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"/>
+
+                    <EditText
+                        android:id="@+id/editText215"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/editText115"
+                        android:layout_toStartOf="@+id/ibtn1"
+                        android:background="@android:drawable/editbox_background"
+                        android:ems="10"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"/>
+                </LinearLayout>
+            </LinearLayout>
+
             <View
                 android:id="@+id/view15"
                 android:layout_width="fill_parent"
                 android:layout_height="1dp"
-                android:layout_below="@id/editText215"
+                android:layout_below="@id/l15"
                 android:layout_marginBottom="20dp"
                 android:background="#000000"/>
 
@@ -1688,59 +2135,86 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText1k"
-                android:imeOptions="actionDone"
-                android:layout_below="@+id/spinner17"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:background="@android:drawable/editbox_background"/>
 
-            <TextView
-                android:text="@string/woche"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/l17"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/textView117"
-                android:textSize="16sp"
-                android:textColor="@android:color/black"
-                android:layout_alignBaseline="@+id/editText1k"
-                android:layout_alignBottom="@+id/editText1k"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText2k"
-                android:imeOptions="actionDone"
-                android:layout_below="@+id/editText1k"
-                android:layout_toStartOf="@+id/ibtn1"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:background="@android:drawable/editbox_background"/>
+                android:layout_below="@id/spinner17"
+                android:orientation="horizontal">
 
-            <TextView
-                android:text="@string/monat"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/textView217"
-                android:textSize="16sp"
-                android:textColor="@android:color/black"
-                android:layout_alignBaseline="@+id/editText2k"
-                android:layout_alignBottom="@+id/editText2k"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView117"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@+id/editText1k"
+                        android:layout_alignBottom="@+id/editText1k"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/woche"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/textView217"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@+id/editText2k"
+                        android:layout_alignBottom="@+id/editText2k"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/monat"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/editText1k"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/spinner17"
+                        android:background="@android:drawable/editbox_background"
+                        android:ems="10"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"/>
+
+                    <EditText
+                        android:id="@+id/editText2k"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/editText1k"
+                        android:layout_toStartOf="@+id/ibtn1"
+                        android:background="@android:drawable/editbox_background"
+                        android:ems="10"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"/>
+                </LinearLayout>
+
+            </LinearLayout>
 
             <View
                 android:id="@+id/view17"
                 android:layout_width="fill_parent"
                 android:layout_height="3dp"
-                android:layout_below="@id/editText2k"
+                android:layout_below="@id/l17"
                 android:layout_marginBottom="20dp"
                 android:background="#000000"/>
             <Button

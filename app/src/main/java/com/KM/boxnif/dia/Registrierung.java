@@ -20,6 +20,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.KM.boxnif.dia.Anfragen.BestaetigungAnfrage;
+import com.KM.boxnif.dia.Anfragen.EmailAnfrage;
 import com.KM.boxnif.dia.Anfragen.LizenzenAnfrage;
 import com.KM.boxnif.dia.Anfragen.NutzerAnfrage;
 import com.KM.boxnif.dia.Anfragen.RegistrierungsAnfrage;
@@ -263,7 +265,7 @@ public class Registrierung extends AppCompatActivity
                     if(success)
                     {
                         // TODO: 05.03.2017 aktion für nach der Registrierung eingügen
-                        //finish();
+                        sendEmail(email,password);
                     }
                     else
                     {
@@ -279,6 +281,34 @@ public class Registrierung extends AppCompatActivity
         RegistrierungsAnfrage ra = new RegistrierungsAnfrage(email,name,password,position,responseListener );
         RequestQueue queue = Volley.newRequestQueue(Registrierung.this);
         queue.add(ra);
+    }
+    public void sendEmail(String _email, String _password)
+    {
+        Response.Listener<String> responseListener = new Response.Listener<String>()
+        {
+            @Override
+            public void onResponse(String response)
+            {
+                try
+                {
+                    JSONObject jsonObject = new JSONObject(response);
+                    /*boolean success = jsonObject.getBoolean("success");
+                    if (success)
+                    {
+                        Toast.makeText(getApplicationContext(), "La", Toast.LENGTH_LONG).show();
+                    } else
+                    {
+                        //Toast.makeText(getApplicationContext(), "Keine Antwort", Toast.LENGTH_LONG).show();
+                    }*/
+                } catch (JSONException e)
+                {
+                    e.printStackTrace();
+                }
+            }
+        };
+        BestaetigungAnfrage bestaetigungAnfrage= new BestaetigungAnfrage(_email,_password, responseListener);
+        RequestQueue queue = Volley.newRequestQueue(Registrierung.this);
+        queue.add(bestaetigungAnfrage);
     }
 
 

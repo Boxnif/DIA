@@ -59,7 +59,6 @@ public class Modul_5 extends AppCompatActivity
         ibtn17 = (Button) findViewById(R.id.ibtn17);
 
         edit101 = (EditText) findViewById(R.id.editText101);
-
         setUp(edit101, Save.me101);
         edit201 = (EditText) findViewById(R.id.editText201);
         setUp(edit201, Save.me201);
@@ -474,7 +473,6 @@ public class Modul_5 extends AppCompatActivity
 
         });
 
-
         spin13= (Spinner) findViewById(R.id.spinner13);
         setUp(spin13, Save.m513);
         spin13.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -497,7 +495,6 @@ public class Modul_5 extends AppCompatActivity
             }
 
         });
-
 
         spin14 = (Spinner) findViewById(R.id.spinner14);
         setUp(spin14, Save.m514);

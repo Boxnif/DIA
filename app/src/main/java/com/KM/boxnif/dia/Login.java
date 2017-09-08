@@ -1,6 +1,7 @@
 package com.KM.boxnif.dia;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -20,7 +21,7 @@ import org.json.JSONObject;
 public class Login extends AppCompatActivity
 {
 
-    Button btn;
+    Button btn,pwButton;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -53,7 +54,6 @@ public class Login extends AppCompatActivity
                             } else
                             {
                                 Toast.makeText(getApplicationContext(), "Email oder Passwort falsch", Toast.LENGTH_LONG).show();
-                                Log.e("Login", "Fehlgeschlagen");
                             }
                         } catch (JSONException e)
                         {
@@ -67,6 +67,16 @@ public class Login extends AppCompatActivity
             }
 
 
+        });
+        pwButton = (Button) findViewById(R.id.pwButton);
+        pwButton.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                Intent i = new Intent(getApplicationContext(), PasswordVergessen.class);
+                startActivity(i);
+            }
         });
     }
 }

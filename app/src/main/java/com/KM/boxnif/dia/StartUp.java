@@ -14,8 +14,10 @@ import android.widget.Toast;
 
 import com.KM.boxnif.dia.Anfragen.AnzahlAnfrage;
 import com.KM.boxnif.dia.Anfragen.AuswertungAnfrage;
+import com.KM.boxnif.dia.Anfragen.BestaetigungAnfrage;
 import com.KM.boxnif.dia.Anfragen.DatenLaden;
 import com.KM.boxnif.dia.Anfragen.DeminischAnfrage;
+import com.KM.boxnif.dia.Anfragen.EmailAnfrage;
 import com.KM.boxnif.dia.Anfragen.GeraetRegistrierenAnfrage;
 import com.KM.boxnif.dia.Anfragen.LizenzenAnfrage;
 import com.KM.boxnif.dia.Anfragen.ProbeversionAnfrage;
@@ -49,6 +51,7 @@ public class StartUp extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
+                Save.setZero();
                 if(Utility.logedIn)
                 {
                     Intent i = new Intent(getApplicationContext(), PatientenInfo.class);
@@ -222,8 +225,4 @@ public class StartUp extends AppCompatActivity
         alert.create();
         alert.show();
     }
-
-
-
-
 }

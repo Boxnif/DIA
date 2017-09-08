@@ -51,6 +51,8 @@
         </activity>
         <activity android:name=".AuswertungsAbfrage">
         </activity>
+        <activity android:name=".PasswordVergessen">
+        </activity>
     </application>
 
 </manifest>
