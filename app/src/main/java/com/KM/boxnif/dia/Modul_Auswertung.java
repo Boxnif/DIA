@@ -23,9 +23,12 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Modul_Auswertung extends AppCompatActivity
 {
-    Button speichernB,zuruekB;
+    Button speichernB,zuruekB, pmsB;
     TextView tv1,tv2,tv3,tv4,tv5,tv6,tv7,tv8,tv9,vorName,nachName,alter,gebDatum,werbeB;
 
     @Override
@@ -84,6 +87,22 @@ public class Modul_Auswertung extends AppCompatActivity
             {
                 Intent i = new Intent(getApplicationContext(), StartUp.class);
                 startActivity(i);
+            }
+        });
+        pmsB = (Button) findViewById(R.id.emailButton);
+        pmsB.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                if(Utility.logedIn)
+                {
+                    showEmail(v);
+                }
+                else
+                {
+                    Toast.makeText(getApplicationContext(), "Sie müssen eingelogged sein um sich eine Email senden zu können.", Toast.LENGTH_LONG).show();
+                }
             }
         });
         werbeB = (Button) findViewById(R.id.werbeButton);
@@ -163,6 +182,50 @@ public class Modul_Auswertung extends AppCompatActivity
             public void onClick(DialogInterface dialog, int which)
             {
                 speichern();
+            }
+        });
+        alert.setNegativeButton("Zurück", new DialogInterface.OnClickListener()
+        {
+            public void onClick(DialogInterface dialog, int id)
+            {
+                dialog.cancel();
+            }
+        });
+        alert.create();
+        alert.show();
+    }
+    private void showEmail(View view)
+    {
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setMessage(Html.fromHtml(getString(R.string.pmsSecure)));
+        alert.setPositiveButton("Senden", new DialogInterface.OnClickListener()
+        {
+            @Override
+            public void onClick(DialogInterface dialog, int which)
+            {
+                String fromEmail = "uw.b.nbi@gmail.com";
+                String fromPassword = "UWnba2016";
+                String toEmails = Utility.email;
+                List toEmailList = Arrays.asList(toEmails
+                        .split("\\s*,\\s*"));
+                Log.i("SendMailActivity", "To List: " + toEmailList);
+                String emailSubject = "Auswertung";
+                String emailBody = "Begutachtet am: "+Utility.heuteT+"."+Utility.heuteM+"."+Utility.heuteY+"\n<br>" +
+                        "Vorname: "+Utility.vor+"\n<br>" +
+                        "Nachname: "+Utility.nach+"\n<br>" +
+                        "Geburtsdatum: "+Utility.gebT+"."+Utility.gebM+"."+Utility.gebY+"\n<br>" +
+                        "Alter: "+Utility.age+"\n<br>" +
+                        "Modul 1: "+Utility.gib1()+"\n<br>" +
+                        "Modul 2: "+Utility.gib2()+"\n<br>" +
+                        "Modul 3: "+Utility.gib3()+"\n<br>" +
+                        "Modul 4: "+Utility.gib4()+"\n<br>" +
+                        "Modul 5: "+Utility.gib5()+"\n<br>" +
+                        "Modul 6: "+Utility.gib6()+"\n<br>" +
+                        "Summe der gewichteten Assessmentpunkte: "+berechnung()+"\n<br>" +
+                        "Besondere Bedarfskonstellation: "+Utility.bbc+"\n<br>" +
+                        "Pflegegrad: "+umrechnung()+"";
+                new GMailSender(Modul_Auswertung.this).execute(fromEmail,
+                        fromPassword, toEmailList, emailSubject, emailBody);
             }
         });
         alert.setNegativeButton("Zurück", new DialogInterface.OnClickListener()

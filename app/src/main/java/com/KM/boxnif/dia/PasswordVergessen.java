@@ -20,6 +20,8 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.regex.Pattern;
 
 
@@ -80,7 +82,6 @@ public class PasswordVergessen extends AppCompatActivity
                     if (success)
                     {
                         String password = jsonObject.getString("password");
-                        Toast.makeText(getApplicationContext(), password, Toast.LENGTH_LONG).show();
                         sendEmail(password);
                     } else
                     {
@@ -98,7 +99,39 @@ public class PasswordVergessen extends AppCompatActivity
     }
     public void sendEmail(String _password)
     {
-        Response.Listener<String> responseListener = new Response.Listener<String>()
+        String fromEmail = "uw.b.nbi@gmail.com";
+        String fromPassword = "UWnba2016";
+        String toEmails = semail;
+        List toEmailList = Arrays.asList(toEmails
+                .split("\\s*,\\s*"));
+        Log.i("SendMailActivity", "To List: " + toEmailList);
+        String emailSubject = "Password vergessen";
+        String emailBody = "<p>Guten Tag,</p>\n" +
+                " \n" +
+                "<p>in dieser Mail erhalten Sie nun noch mal Ihr Passwort.</p>\n" +
+                "<p>Bewahren Sie diese Mail und Ihr Passwort immer sicher auf.</p>\n" +
+                " \n" +
+                "<p>Ihr Passwort ist: "+_password+"</p>\n" +
+                " \n" +
+                "<p>Falls Sie Ihr Passwort nicht vergessen hatten, ignorieren Sie diese Mail bitte einfach.</p>\n" +
+                " \n" +
+                "<p>Für weitere Fragen melden Sie sich bitte unter info@uw-b.de.</p>\n" +
+                " \n" +
+                "<p>Viele Grüße aus der Südheide</p>\n" +
+                "\n" +
+                "<p>Ralph Wißgott</p>\n" +
+                "<p>Unternehmensberatung Wißgott</p>\n" +
+                "<p>Getreidering 3</p>\n" +
+                "<p>29308 Winsen (Aller)</p>\n" +
+                "\n" +
+                "<p>Tel.: 05143 / 669627</p>\n" +
+                "<p>Fax: 05143 / 6690834</p>\n" +
+                "\n" +
+                "<p>Email: rw@uw-b.de</p>\n" +
+                "<p>URL: http://www.uw-b.de</p>";
+        new GMailSender(PasswordVergessen.this).execute(fromEmail,
+                fromPassword, toEmailList, emailSubject, emailBody);
+        /*Response.Listener<String> responseListener = new Response.Listener<String>()
         {
             @Override
             public void onResponse(String response)
@@ -106,14 +139,14 @@ public class PasswordVergessen extends AppCompatActivity
                 try
                 {
                     JSONObject jsonObject = new JSONObject(response);
-                    /*boolean success = jsonObject.getBoolean("success");
+                    *//*boolean success = jsonObject.getBoolean("success");
                     if (success)
                     {
                         Toast.makeText(getApplicationContext(), "La", Toast.LENGTH_LONG).show();
                     } else
                     {
                         //Toast.makeText(getApplicationContext(), "Keine Antwort", Toast.LENGTH_LONG).show();
-                    }*/
+                    }*//*
                 } catch (JSONException e)
                 {
                     e.printStackTrace();
@@ -122,6 +155,6 @@ public class PasswordVergessen extends AppCompatActivity
         };
         EmailAnfrage emailAnfrage= new EmailAnfrage(semail,_password, responseListener);
         RequestQueue queue = Volley.newRequestQueue(PasswordVergessen.this);
-        queue.add(emailAnfrage);
+        queue.add(emailAnfrage);*/
     }
 }

@@ -4,7 +4,11 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#6766FF</color>
     <color name="aLitteBlack">#000000</color>
-    <color name="pastellGrün">#aaffa3</color>
+    <color name="pastellGrün">#C8ffc1</color>
     <color name="pastellBlau">#6766ff</color>
+    <color name="pastellGrau">#e6e6e6</color>
+    <color name="cukBlau">#6766ff</color>
+    <color name="cukGruen">#aaffa3</color>
+    <color name="background">#fafafa</color>
 
 </resources>

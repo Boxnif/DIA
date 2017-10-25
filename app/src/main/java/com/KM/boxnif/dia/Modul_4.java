@@ -412,7 +412,7 @@ public class Modul_4 extends AppCompatActivity
 
     public void setUp(Spinner sp,int sptxt, LinkedList<Spinner> spin)
     {
-        sp.setAdapter(ArrayAdapter.createFromResource(this, R.array.haufigkeiten_array, R.layout.spinner_item));
+        sp.setAdapter(ArrayAdapter.createFromResource(this, R.array.selbststaendig_array, R.layout.spinner_item));
         spin.add(sp);
         sp.setSelection(sptxt);
     }

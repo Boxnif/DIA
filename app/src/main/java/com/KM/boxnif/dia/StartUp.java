@@ -4,12 +4,15 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
+import android.text.InputType;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.KM.boxnif.dia.Anfragen.AnzahlAnfrage;
@@ -31,6 +34,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.net.NetworkInterface;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -127,6 +131,7 @@ public class StartUp extends AppCompatActivity
                 String url = "http://www.unternehmensberatung-wissgott.de/index.php?option=com_matukio&view=eventlist&Itemid=151";
                 Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
                 startActivity(browserIntent);
+
             }
         });
         dsB = (Button) findViewById(R.id.dsButton);
@@ -224,5 +229,8 @@ public class StartUp extends AppCompatActivity
         });
         alert.create();
         alert.show();
+    }
+    public void onBackPressed() {
+        ActivityCompat.finishAffinity(StartUp.this);
     }
 }

@@ -4,7 +4,7 @@
     <string name="patientenalter"><![CDATA[<br><br><b>Patientenalter:</b><br>]]></string>
     <string name="u18m"><![CDATA[<br><br>Da der Patient jünger als 18 Monate, bzw. 18 Monate, alt ist, findet eine abgeänderte Berechnung statt, in der sowohl einzelne Kriterien, als auch ganze Module wegfallen.]]></string>
     <string name="ue18m"><![CDATA[<br><br>Da der Patient älter als 18 Monate und jünger als 18 Jahre alt ist, findet eine abgeänderte Berechnung statt, in der einzelne Kriterien mit unterschiedlichen Einzelpunkten berechnet werden.]]></string>
-    <string name="ue18j"><![CDATA[<br><br>Da der Patient älter als 18 Jahre ist, findet die Standartberechnung statt.]]></string>
+    <string name="ue18j"><![CDATA[<br><br>Da der Patient älter als 18 Jahre ist, findet die Standardberechnung statt.]]></string>
 
     <string name="m001">Neues Begutachtungsinstrument zur Feststellung von Pflegebedürftigkeit</string>
     <string name="m002">Neue Begutachtung</string>
@@ -20,9 +20,9 @@
     <string name="m012">Gerät Registrieren</string>
     <string name="m013">Lizenzen Kaufen</string>
     <string name="m014">Alter</string>
-    <string name="m015">Zu unserem Seminarkallender</string>
+    <string name="m015">Zu unserem Seminarkalender</string>
     <string name="m016">Datenschutzerklärung</string>
-
+    <string name="m017">Beim Monatskalender kann oben links die Jahreszahl ausgewählt werden.</string>
 
     <string name="m1ueberschrift">Modul 1: Mobilität</string>
     <string name="m101">1.1 Positonswechsel im Bett</string>
@@ -121,6 +121,8 @@
     <string name="mA14">Löschen</string>
     <string name="weiter">Weiter</string>
     <string name="speichern">Sind Sie sicher, dass Sie diese Daten speichern wollen?</string>
+    <string name="pms">Per mail senden</string>
+    <string name="pmsSecure">Wollen Sie diese Daten wirklich an Ihre E-Mailadresse senden?</string>
 
     <string name="title_activity_modul_1__auswertung">Modul_1_Auswertung</string>
     <string name="title_activity_modul_2__auswertung">Modul_2_Auswertung</string>
@@ -134,7 +136,7 @@
     <string name="infotext100"><![CDATA[Die Einschätzung richtet sich ausschließlich danach, ob die Person in der Lage ist ohne personelle Unterstützung eine Körperhaltung einzunehmen/zu wechseln und sich fortzubewegen. Zu beurteilen sind hier lediglich Aspekte wie Körperkraft, Balance, Bewegungskoordination etc. und nicht die zielgerichtete Fortbewegung. Hier werden nicht die Folgen kognitiver Beeinträchtigungen auf Planung, Steuerung und Durchführung motorischer Handlungen abgebildet.]]></string>
     <string name="infotext101"><![CDATA[<H1><b>Positionswechsel im Bett</b></H1><b>Einnehmen von verschiedenen Positionen im Bett, Drehen um die Längsachse, Aufrichten aus dem Liegen</b><br><br>
                                 <b>Selbständig:</b> Selbständig ist auch eine Person, die ihre Position unter Nutzung von Hilfsmitteln (Aufrichthilfe, Bettseitenteil, Strickleiter, elektrisch verstellbares Bett) allein verändern kann.<br>
-                                <b>Überwiegend selbständig:</b> Selbständig ist auch eine Person, die ihre Position unter Nutzung von Hilfsmitteln (Aufrichthilfe, Bettseitenteil, Strickleiter, elektrisch verstellbares Bett) allein verändern kann.<br>
+                                <b>Überwiegend selbständig:</b> Die Person kann beispielsweise nach Anreichen eines Hilfsmittels oder Reichen der Hand die Lage im Bett verändern.<br>
                                 <b>Überwiegend unselbständig:</b> Die Person kann beim Positionswechsel nur wenig mithelfen, z.B. auf den Rücken rollen, am Bettgestell festhalten, Aufforderungen folgen wie z.B. „Bitte die Arme vor der Brust verschränken und den Kopf auf die Brust legen.“<br>
                                 <b>Unselbständig:</b> Die Person kann sich beim Positionswechsel nicht oder nur minimal beteiligen.]]></string>
     <string name="infotext102"><![CDATA[<H1><b>Halten einer stabilen Sitzposition</b></H1>
@@ -154,7 +156,7 @@
                                    Als Anhaltsgröße für übliche Gehstrecken innerhalb einer Wohnung werden mindestens acht Meter festgelegt. Die Fähigkeiten zur räumlichen Orientierung und zum Treppensteigen sind unter Punkt 2.2 bzw. Punkt 1.5 zu berücksichtigen.<br><br>
                                 <b>Selbständig:</b> Die Person kann sich ohne Hilfe durch andere Personen fortbewegen. Dies kann ggf. unter Nutzung von Hilfsmitteln, z.B. Rollator, Rollstuhl oder sonstigen Gegenständen, z.B. Stock oder Möbelstück geschehen.<br>
                                 <b>Überwiegend selbständig:</b> Die Person kann die Aktivität überwiegend selbständig durchführen. Personelle Hilfe ist beispielsweise erforderlich im Sinne von Bereitstellen von Hilfsmitteln (z.B. Rollator oder Gehstock), Beobachtung <b>aus Sicherheitsgründen</b> oder gelegentlichem Stützen, Unterhaken.<br>
-                                <b>Überwiegend unselbständig:</b> Die Person kann nur wenige Schritte gehen oder sich mit dem Rollstuhl nur wenige Meter fortbewegen oder kann nur mit Stützung oder Festhalten einer Pflegeperson gehen. Die ausschließliche Fähigkeit der Fortbewegung durch Krabbeln oder Robben ist generell als „überwiegend unselbständig“ zu bewerten.<br>
+                                <b>Überwiegend unselbständig:</b> Die Person kann nur wenige Schritte gehen oder sich mit dem Rollstuhl nur wenige Meter fortbewegen oder kann nur mit Stützung oder Festhalten einer Pflegeperson gehen. Auch wenn sich die Person darüber hinaus aus eigenem Willen in ihrer Wohnung krabbelnd oder robbend fortbewegen kann, ändert dies nichts an der Bewertung als "überwiegend unselbstständig".<br>
                                 <b>Unselbständig:</b> Die Person muss getragen oder vollständig im Rollstuhl geschoben werden.]]></string>
     <string name="infotext105"><![CDATA[<H1><b>Treppensteigen</b></H1>
                                 <b>Überwinden von Treppen zwischen zwei Etagen</b><br>
@@ -418,7 +420,7 @@
     <string name="infotext305"><![CDATA[<H1><b>Physisch aggressives Verhalten gegenüber anderen Personen</b></H1><br>Physisch aggressives Verhalten gegenüber anderen Personen kann z.B. darin bestehen, nach Personen zu schlagen oder zu treten, andere mit Zähnen oder Fingernägeln zu verletzen, andere zu stoßen oder wegzudrängen oder in Verletzungsversuchen gegenüber anderen Personen mit Gegenständen.]]></string>
     <string name="infotext306"><![CDATA[<H1><b>Verbale Aggression</b></H1><br>Verbale Aggression kann sich z. B. in verbalen Beschimpfungen oder in der Bedrohung anderer Personen ausdrücken.]]></string>
     <string name="infotext307"><![CDATA[<H1><b>Andere pflegerelevante vokale Auffälligkeiten</b></H1><br>Andere pflegerelevante vokale Auffälligkeiten können sein: Lautes Rufen, Schreien, Klagen ohne nachvollziehbaren Grund, vor sich hin schimpfen, fluchen, seltsame Laute von sich geben, ständiges Wiederholen von Sätzen und Fragen.]]></string>
-    <string name="infotext308"><![CDATA[<H1><b>Abwehr pflegerischer oder anderer unterstützender Maßnahmen</b></H1><br>Hier ist die Abwehr von Unterstützung, z.B. bei der Körperpflege, die Verweigerung der Nahrungsaufnahme, der Medikamenteneinnahme oder anderer notwendiger Verrichtungen sowie die Manipulation an Vorrichtungen wie z.B. an Kathetern, Infusionen oder Sondenernährung gemeint. Dazu gehört nicht die willentliche (selbstbestimmte) Ablehnung bestimmter Maßnahmen.]]></string>
+    <string name="infotext308"><![CDATA[<H1><b>Abwehr pflegerischer und anderer unterstützender Maßnahmen</b></H1><br>Hier ist die Abwehr von Unterstützung, z.B. bei der Körperpflege, die Verweigerung der Nahrungsaufnahme, der Medikamenteneinnahme oder anderer notwendiger Verrichtungen sowie die Manipulation an Vorrichtungen wie z.B. an Kathetern, Infusionen oder Sondenernährung gemeint. Dazu gehört nicht die willentliche (selbstbestimmte) Ablehnung bestimmter Maßnahmen.]]></string>
     <string name="infotext309"><![CDATA[<H1><b>Wahnvorstellungen</b></H1><br>Wahnvorstellungen beziehen sich z.B. auf die Vorstellung, mit Verstorbenen oder imaginären Personen in Kontakt zu stehen oder auf die Vorstellung, verfolgt, bedroht oder bestohlen zu werden.]]></string>
     <string name="infotext310"><![CDATA[<H1><b>Ängste</b></H1><br>Die Person hat starke Ängste oder Sorgen, sie erlebt Angstattacken unabhängig von der Ursache.]]></string>
     <string name="infotext311"><![CDATA[<H1><b>Antriebslosigkeit bei depressiver Stimmungslage</b></H1><br>Antriebslosigkeit bei depressiver Stimmungslage zeigt sich z.B. daran, dass die Person kaum Interesse an der Umgebung hat, kaum Eigeninitiative aufbringt und Motivierung durch andere benötigt, um etwas zu tun. Sie wirkt traurig oder apathisch, möchte am liebsten das Bett nicht verlassen. Hier ist nicht gemeint, dass Menschen mit rein kognitiven Beeinträchtigungen, z.B. bei Demenz Impulse benötigen, um eine Handlung zu beginnen oder fortzuführen.]]></string>
@@ -869,11 +871,14 @@
     <string name="fName">Firmenname</string>
     <string name="emailAdresse">Email-Adresse</string>
     <string name="emailAdresseW">Email-Adresse wiederholen</string>
+    <string name="idioText">Eine Registrierung ist nur mit einer real existierenden Mailadresse möglich, da eine Bestätigungsmail versendet wird.</string>
+
     <string name="password">Passwort</string>
     <string name="passwordW">Passwort wiederholen</string>
     <string name="adLizenzen">Anzahl der Lizenzen</string>
     <string name="pfdRegistrierung">Preis für die Registrierung</string>
-    <string name="bestätigung">Hiermit bestätige ich die Datenschutzerklärung gelesen zu haben und diese zu akzeptieren</string>
+    <string name="bestätigung">Hiermit bestätige ich die Datenschutzerklärung gelesen zu haben und diese zu akzeptieren.</string>
+    <string name="newsLetter">Ich möchte den kostenlosen Newsletter der Unternehmensberatung Wissgott abonnieren.</string>
     <string name="agb">AGB</string>
     <string name="registrierungundKauf">Registrierung</string>
     <string name="reginf1"><![CDATA[<b>Name:</b><br>]]></string>

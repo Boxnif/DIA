@@ -9,20 +9,25 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/background"
     tools:context="com.KM.boxnif.dia.Modul_Auswertung">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <ScrollView
             android:id="@+id/sview"
             android:layout_width="match_parent"
-            android:layout_height="426dp"
+            android:layout_height="match_parent"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true">
+            android:layout_alignParentTop="true"
+            android:clickable="false">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -232,13 +237,31 @@
                     android:text="@string/mA10"/>
 
                 <Button
-                    android:id="@+id/backstartButton"
+                    android:id="@+id/emailButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/saveButton"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
+                    android:text="@string/pms"/>
+
+                <Button
+                    android:id="@+id/backstartButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/emailButton"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
                     android:text="@string/mA12"/>
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/backstartButton"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/background"/>
 
             </RelativeLayout>
         </ScrollView>

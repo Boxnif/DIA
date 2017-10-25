@@ -216,10 +216,18 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="@android:color/black"/>
             <Button
-                android:id="@+id/loeschenButton"
+                android:id="@+id/emailButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/endauswertung_ps"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="@string/pms"/>
+            <Button
+                android:id="@+id/loeschenButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/emailButton"
                 android:text="@string/mA14"/>
 
 

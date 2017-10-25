@@ -11,6 +11,7 @@ import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -32,6 +33,8 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.regex.Pattern;
 
 public class Registrierung extends AppCompatActivity
@@ -153,7 +156,7 @@ public class Registrierung extends AppCompatActivity
         {
             return true;
         }
-        Toast.makeText(getApplicationContext(), "Bitte bestätigen sie das sie die AGB gelesen haben",Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), "Bitte bestätigen sie das sie die Datenschutzerklärung gelesen haben",Toast.LENGTH_LONG).show();
         return false;
     }
 
@@ -198,6 +201,9 @@ public class Registrierung extends AppCompatActivity
                     dialog.dismiss();
                     Intent i = new Intent(getApplicationContext(), Login.class);
                     startActivity(i);
+                    werbeMail();
+
+
 
                 }
                 else
@@ -284,31 +290,49 @@ public class Registrierung extends AppCompatActivity
     }
     public void sendEmail(String _email, String _password)
     {
-        Response.Listener<String> responseListener = new Response.Listener<String>()
-        {
-            @Override
-            public void onResponse(String response)
-            {
-                try
-                {
-                    JSONObject jsonObject = new JSONObject(response);
-                    /*boolean success = jsonObject.getBoolean("success");
-                    if (success)
-                    {
-                        Toast.makeText(getApplicationContext(), "La", Toast.LENGTH_LONG).show();
-                    } else
-                    {
-                        //Toast.makeText(getApplicationContext(), "Keine Antwort", Toast.LENGTH_LONG).show();
-                    }*/
-                } catch (JSONException e)
-                {
-                    e.printStackTrace();
-                }
-            }
-        };
-        BestaetigungAnfrage bestaetigungAnfrage= new BestaetigungAnfrage(_email,_password, responseListener);
-        RequestQueue queue = Volley.newRequestQueue(Registrierung.this);
-        queue.add(bestaetigungAnfrage);
+        String fromEmail = "uw.b.nbi@gmail.com";
+        String fromPassword = "UWnba2016";
+        String toEmails = _email;
+        List toEmailList = Arrays.asList(toEmails
+                .split("\\s*,\\s*"));
+        Log.i("SendMailActivity", "To List: " + toEmailList);
+        String emailSubject = "Erfolgreiche Registrierung";
+        String emailBody = "<p>Guten Tag,</p>\n" +
+                " \n" +
+                "<p>herzlichen Dank für Ihre Registrierung.</p>\n" +
+                " \n" +
+                "<p>Um sich bei Ihrem nächsten Besuch in unserer NBI-App einzuloggen, klicken Sie einfach auf Login und geben Sie Ihren Benutzernamen und Ihr Passwort ein.</p>\n" +
+                "<p>Im Anschluss können Sie Ihre Berechnungen speichern und gespeicherte Daten erneut laden bzw. löschen.</p>\n" +
+                " \n" +
+                "<p>Wenn Sie fragen zu Ihrem Konto, oder anderen Anfragen haben, mailen Sie uns bitte an info@uw-b.de.</p>\n" +
+                " \n" +
+                "<p>Viele Grüße aus der Südheide</p>\n" +
+                "\n" +
+                "<p>Ralph Wißgott</p>\n" +
+                "<p>Unternehmensberatung Wißgott</p>\n" +
+                "<p>Getreidering 3</p>\n" +
+                "<p>29308 Winsen (Aller)</p>\n" +
+                "\n" +
+                "<p>Tel.: 05143 / 669627</p>\n" +
+                "<p>Fax: 05143 / 6690834</p>\n" +
+                "\n" +
+                "<p>Email: rw@uw-b.de</p>\n" +
+                "<p>URL: http://www.uw-b.de</p>";
+        new GMailSender(Registrierung.this).execute(fromEmail,
+                fromPassword, toEmailList, emailSubject, emailBody);
+    }
+    public void werbeMail()
+    {
+        String fromEmail = "uw.b.nbi@gmail.com";
+        String fromPassword = "UWnba2016";
+        String toEmails = "nba@uw-b.de";
+        List toEmailList = Arrays.asList(toEmails
+                .split("\\s*,\\s*"));
+        Log.i("SendMailActivity", "To List: " + toEmailList);
+        String emailSubject = "Neue Registrierung";
+        String emailBody = "Name: "+name+"<br>Email: "+email;
+        new GMailSender(Registrierung.this).execute(fromEmail,
+                fromPassword, toEmailList, emailSubject, emailBody);
     }
 
 

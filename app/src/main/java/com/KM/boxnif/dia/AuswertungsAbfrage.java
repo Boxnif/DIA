@@ -6,9 +6,11 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.KM.boxnif.dia.Anfragen.AnzahlAnfrage;
 import com.KM.boxnif.dia.Anfragen.AuswertungAnfrage;
@@ -21,11 +23,15 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Arrays;
+import java.util.List;
+
 
 public class AuswertungsAbfrage extends AppCompatActivity
 {
-    Button lButton;
+    Button lButton, pmsB;
     TextView tv1,tv2,tv3,tv4,tv5,tv6,tv7,tv8,tv9,vorName,nachName,alter,gebDatum, estDatum;
+    String Vorname, Nachname, Geburtsdatum, Alt, ErstelltDatum, Modul1, Modul2, Modul3, Modul4, Modul5, Modul6, AssPunkte, BBC, Pflegegrad, EMail;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -33,21 +39,21 @@ public class AuswertungsAbfrage extends AppCompatActivity
         setContentView(R.layout.activity_auswertungs_abfrage);
         Intent intent = getIntent();
         final String Auswertungs_ID = intent.getStringExtra("Auswertungs_ID");
-        String Vorname = intent.getStringExtra("Vorname");
-        String Nachname = intent.getStringExtra("Nachname");
-        String Geburtsdatum = intent.getStringExtra("Geburtsdatum");
-        String Alt = intent.getStringExtra("Alt");
-        String ErstelltDatum = intent.getStringExtra("ErstelltDatum");
-        String Modul1 = intent.getStringExtra("Modul1");
-        String Modul2 = intent.getStringExtra("Modul2");
-        String Modul3 = intent.getStringExtra("Modul3");
-        String Modul4 = intent.getStringExtra("Modul4");
-        String Modul5 = intent.getStringExtra("Modul5");
-        String Modul6 = intent.getStringExtra("Modul6");
-        String AssPunkte = intent.getStringExtra("AssPunkte");
-        String BBC = intent.getStringExtra("BBC");
-        String Pflegegrad = intent.getStringExtra("Pflegegrad");
-        String EMail = intent.getStringExtra("EMail");
+        Vorname = intent.getStringExtra("Vorname");
+        Nachname = intent.getStringExtra("Nachname");
+        Geburtsdatum = intent.getStringExtra("Geburtsdatum");
+        Alt = intent.getStringExtra("Alt");
+        ErstelltDatum = intent.getStringExtra("ErstelltDatum");
+        Modul1 = intent.getStringExtra("Modul1");
+        Modul2 = intent.getStringExtra("Modul2");
+        Modul3 = intent.getStringExtra("Modul3");
+        Modul4 = intent.getStringExtra("Modul4");
+        Modul5 = intent.getStringExtra("Modul5");
+        Modul6 = intent.getStringExtra("Modul6");
+        AssPunkte = intent.getStringExtra("AssPunkte");
+        BBC = intent.getStringExtra("BBC");
+        Pflegegrad = intent.getStringExtra("Pflegegrad");
+        EMail = intent.getStringExtra("EMail");
 
 
         tv1 = (TextView) findViewById(R.id.endauswertung_01);
@@ -87,6 +93,22 @@ public class AuswertungsAbfrage extends AppCompatActivity
             public void onClick(View view)
             {
                 showAlert(view,Auswertungs_ID);
+            }
+        });
+        pmsB = (Button) findViewById(R.id.emailButton);
+        pmsB.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                if(Utility.logedIn)
+                {
+                    showEmail(v);
+                }
+                else
+                {
+                    Toast.makeText(getApplicationContext(), "Sie müssen eingelogged sein um sich eine Email senden zu können.", Toast.LENGTH_LONG).show();
+                }
             }
         });
     }
@@ -140,5 +162,49 @@ public class AuswertungsAbfrage extends AppCompatActivity
         loeschenAnfrage loeschenAnfrage = new loeschenAnfrage(id, responseListener);
         RequestQueue queue = Volley.newRequestQueue(AuswertungsAbfrage.this);
         queue.add(loeschenAnfrage);
+    }
+    private void showEmail(View view)
+    {
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setMessage(Html.fromHtml(getString(R.string.pmsSecure)));
+        alert.setPositiveButton("Senden", new DialogInterface.OnClickListener()
+        {
+            @Override
+            public void onClick(DialogInterface dialog, int which)
+            {
+                String fromEmail = "uw.b.nbi@gmail.com";
+                String fromPassword = "UWnba2016";
+                String toEmails = Utility.email;
+                List toEmailList = Arrays.asList(toEmails
+                        .split("\\s*,\\s*"));
+                Log.i("SendMailActivity", "To List: " + toEmailList);
+                String emailSubject = "Auswertung";
+                String emailBody = "Begutachtet am: "+ErstelltDatum+"\n<br>" +
+                        "Vorname: "+Vorname+"\n<br>" +
+                        "Nachname: "+Nachname+"\n<br>" +
+                        "Geburtsdatum: "+Geburtsdatum+"\n<br>" +
+                        "Alter: "+Alt+"\n<br>" +
+                        "Modul 1: "+Modul1+"\n<br>" +
+                        "Modul 2: "+Modul2+"\n<br>" +
+                        "Modul 3: "+Modul3+"\n<br>" +
+                        "Modul 4: "+Modul4+"\n<br>" +
+                        "Modul 5: "+Modul5+"\n<br>" +
+                        "Modul 6: "+Modul6+"\n<br>" +
+                        "Summe der gewichteten Assessmentpunkte: "+AssPunkte+"\n<br>" +
+                        "Besondere Bedarfskonstellation: "+BBC+"\n<br>" +
+                        "Pflegegrad: "+Pflegegrad+"";
+                new GMailSender(AuswertungsAbfrage.this).execute(fromEmail,
+                        fromPassword, toEmailList, emailSubject, emailBody);
+            }
+        });
+        alert.setNegativeButton("Zurück", new DialogInterface.OnClickListener()
+        {
+            public void onClick(DialogInterface dialog, int id)
+            {
+                dialog.cancel();
+            }
+        });
+        alert.create();
+        alert.show();
     }
 }
